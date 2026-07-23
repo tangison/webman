@@ -10,16 +10,16 @@ List before installing:
 npx skills add tangison/webman --list
 ```
 
-Install Webman interactively:
+Install Webman for the detected project harness:
 
 ```bash
 npx skills add tangison/webman
 ```
 
-Install all Webman skills to all detected harnesses only after approval:
+Install all Webman skills to the active project harness when supported:
 
 ```bash
-npx skills add tangison/webman --all
+npx skills add tangison/webman
 ```
 
 Verify:
@@ -45,7 +45,21 @@ npx skills add tangison/webman -a zed
 npx skills add tangison/webman -a opencode
 ```
 
-Check the installer’s current supported-agent list before relying on an identifier. Do not manually copy files into guessed directories when the installer supports the harness.
+Check the installer’s current supported-agent list before relying on an identifier. Do not manually copy files into guessed directories when the installer supports the harness. Install verified project-scoped skills automatically. Ask before global, privileged, destructive, licence-sensitive, uncertain, or cross-harness changes.
+
+## Required foundation
+
+Verify current primary sources and exact install names before running:
+
+```bash
+npx skills add https://github.com/nutlope/hallmark --skill hallmark
+npx skills add https://github.com/leonxlnx/taste-skill --skill design-taste-frontend
+npx skills add https://github.com/leonxlnx/taste-skill --skill full-output-enforcement
+npx skills add https://github.com/freshtechbro/claudedesignskills --skill animejs
+npx skills add https://github.com/freshtechbro/claudedesignskills --skill gsap-scrolltrigger
+```
+
+Use each repository's current official harness-specific setup when it provides hooks, commands, agents, or MCP servers beyond portable skills. Superpowers and Impeccable require this check.
 
 ## Plugin-specific systems
 

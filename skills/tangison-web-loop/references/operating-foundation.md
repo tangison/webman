@@ -6,7 +6,7 @@ At the start of every project:
 
 1. Identify the harness and its skill, plugin, connector, MCP, browser, shell, filesystem, image, document, and deployment capabilities.
 2. Read repository instructions and existing handoff files.
-3. List required capabilities, available capabilities, missing capabilities, and installation actions requiring approval.
+3. List required capabilities, available capabilities, missing capabilities, automatic project-scoped installations, and any exceptional installation requiring approval.
 4. Verify current external tools from their primary sources.
 5. Record the result in `PROOF.md`.
 
@@ -65,7 +65,7 @@ Use `PASS`, `FAIL`, `BLOCKED`, or `ACCEPTED RISK`. Evidence must be reproducible
 
 ## Completion language
 
-- Say `planned` only when scope and acceptance criteria are approved.
+- Say `planned` only when scope and acceptance criteria are explicit enough to execute, whether supplied directly, verified from the project, or approved during a requested planning phase.
 - Say `built` only when code exists and the production build passes.
 - Say `tested` only when named tests ran and results are retained.
 - Say `audited` only when named tools or documented manual checks ran.

@@ -1,6 +1,6 @@
 ---
 name: tangison-web-create
-description: Build complete, intentional, client-ready websites from an approved plan and content pack. Use for Tangison Studio website demos and full client builds, including every public route, locked demo page, loading state, empty state, error page, legal page, sitemap, metadata file, responsive breakpoint, and launch requirement that agents commonly forget.
+description: Autonomously build complete, intentional, client-ready websites from the user's brief, existing project, and working Webman files. Default to a full build and use demo locks only when the user explicitly requests a demo. Include every applicable route, state, legal page, sitemap, metadata file, responsive breakpoint, optimised media asset, motion behaviour, and launch requirement agents commonly forget.
 ---
 
 # Tangison Web Creation
@@ -11,15 +11,15 @@ Build websites that feel art-directed, work end to end, and are honest about wha
 
 This skill is harness-neutral. Use the current agent’s repository, filesystem, shell, browser, screenshot, image, package, test, connector, and MCP capabilities by purpose. Do not depend on Codex-specific command names. Inspect before editing, use tools for real state, and retain evidence in `PROOF.md`.
 
-Iterate through `inspect, plan, implement the smallest complete slice, run checks, render, critique, fix root causes, re-run checks, record`. Work route by route and journey by journey. Continue until acceptance criteria pass, three cycles show no improvement, ten cycles run, or external authority is required.
+Iterate through `inspect, define the next bounded outcome, implement the smallest complete slice, run checks, render, critique, debug root causes, re-run checks, record`. Work route by route and journey by journey. Continue until acceptance criteria pass, three cycles show no improvement, ten cycles run, or external authority is required.
 
-Do not start by writing components. First read `PRODUCT.md`, `BRAND.md`, `BUILD_PLAN.md`, `CONTENT_PLAN.md`, supplied brand assets, and the current codebase. If any file is absent, interview the user one concise question at a time until the missing decision is resolved.
+Before editing, read available `PRODUCT.md`, `BRAND.md`, `BUILD_PLAN.md`, `CONTENT_PLAN.md`, supplied brand assets, and the current codebase. If a Webman file is absent, create the minimum working version from verified context and continue. Ask one concise question only when a missing decision materially changes the build.
 
 ## 1. Confirm the build contract
 
 Confirm these before implementation:
 
-1. Build mode: demo, full, redesign, or repair.
+1. Build mode: full, redesign, repair, or an explicitly requested demo. Full is the default.
 2. Framework and current stable version.
 3. Package manager and deployment target.
 4. Audience, offer, conversion goal, and primary call to action.
@@ -32,11 +32,13 @@ Confirm these before implementation:
 
 Do not invent client facts, prices, metrics, testimonials, addresses, registration details, policies, or legal claims.
 
-## 2. Choose demo or full mode
+## 2. Resolve build mode
+
+Use full mode unless the user explicitly says `demo`, `client demo`, or equivalent. Do not infer demo mode from a client project, preview deployment, incomplete content, or an early-stage repository. Ask only if the user's wording is genuinely contradictory.
 
 ### Demo mode
 
-Default demo access:
+Default explicit-demo access:
 
 - The home page is unlocked, including the complete hero and a representative section below it.
 - One approved brand or visual-direction page is unlocked.
@@ -178,7 +180,7 @@ Reject generic AI patterns unless the brief specifically calls for them:
 - stock photographs of staged handshakes or people laughing at laptops;
 - unsupported claims and invented social proof.
 
-Name one art-direction owner before implementation: Taste Skill from `https://github.com/Leonxlnx/taste-skill`, Hallmark from `https://github.com/Nutlope/hallmark`, Impeccable from `https://github.com/pbakaus/impeccable`, or another approved system. Supporting design skills may study, critique, harden, adapt, or audit. They must not overwrite the approved `BRAND.md` or silently mix incompatible directions.
+Name one art-direction owner before implementation. Taste sets the layout-variance, motion-intensity, and density dials. Hallmark from `https://github.com/nutlope/hallmark` is mandatory as the structural anti-slop gate and final independent design audit, whether or not it owns art direction. Impeccable from `https://github.com/pbakaus/impeccable` establishes design context, hardens responsive behaviour and states, critiques, and polishes. They must not overwrite approved `BRAND.md` decisions or silently mix incompatible directions.
 
 For React product interfaces, evaluate Astryx from `https://github.com/facebook/astryx`. If selected, inspect its current docs and CLI, pin exact packages, customise tokens to `BRAND.md`, avoid stock themes as the final identity, and measure accessibility and bundle impact. Astryx is a candidate, not a universal default.
 
@@ -210,13 +212,51 @@ Use this order:
 8. Build all required system states and operational pages.
 9. Connect integrations with safe environment separation.
 10. Add focused tests for critical paths.
-11. Verify the build before audit.
+11. Run Hallmark structural review and Impeccable critique against representative desktop and mobile renders.
+12. Verify the build before audit.
 
-Use Superpowers from `https://github.com/obra/superpowers` for the applicable planning, test-driven development, systematic debugging, review, and verification workflows. Use Ponytail from `https://github.com/dietrichgebert/ponytail` to constrain dependencies and speculative abstraction. Record which workflow ran and its proof.
+Use Superpowers from `https://github.com/obra/superpowers` as the engineering-process owner. Use brainstorming only when requirements are ambiguous, test-driven development for non-trivial behaviour, systematic-debugging for every bug, failed test, broken build, performance regression, or unexpected result, code review before release, and verification-before-completion before every completion claim. Use Ponytail from `https://github.com/dietrichgebert/ponytail` to constrain dependencies and speculative abstraction. Record which workflow ran and its proof.
 
 Prefer the platform, standard library, and installed dependencies. Add a dependency only when it materially reduces risk or complexity. Do not create speculative abstractions or scaffolding for imagined future features.
 
-## 8. Responsive and accessible behaviour
+Apply `full-output-enforcement` from `https://github.com/leonxlnx/taste-skill`. Deliver every requested route, component, state, file, and test completely. Do not leave TODOs, omitted code, placeholder comments, dead controls, skeleton-only implementations, or prose claiming that the remainder follows the same pattern.
+
+## 8. Motion and scroll system
+
+Every site needs intentional motion and scroll rhythm, including restrained sites. Motion must explain hierarchy, continuity, feedback, or spatial change. Do not animate solely for spectacle.
+
+Record in `BRAND.md`:
+
+- motion purpose and intensity;
+- page-entry and route-transition behaviour;
+- section-reveal and scroll-continuity rules;
+- hover, focus, active, loading, success, and error feedback;
+- duration, delay, easing, stagger, and interruption rules;
+- reduced-motion alternatives;
+- cleanup and route-unmount behaviour;
+- performance budget and low-powered-device fallback.
+
+Use:
+
+- CSS transitions, keyframes, IntersectionObserver, and native browser APIs for simple motion;
+- the `animejs` skill from `https://github.com/freshtechbro/claudedesignskills` for deliberate timelines, staggers, SVG, and interaction choreography;
+- the `gsap-scrolltrigger` skill from the same source for advanced scroll-driven storytelling, pinning, scrubbing, or coordinated parallax.
+
+Ponytail chooses the smallest runtime. Use one primary motion engine unless a measured requirement justifies more. Prefer transforms and opacity, avoid layout-thrashing properties, clean up timelines and listeners, prevent scroll jank, and never let motion block content or input.
+
+## 9. Media pipeline
+
+- Preserve original source assets.
+- Convert suitable photographic or raster delivery assets to WebP or AVIF, retaining a safe fallback when target support requires it.
+- Do not rasterise SVG logos or icons merely to satisfy the WebP rule.
+- Preserve transparency, colour fidelity, aspect ratio, and intended crop.
+- Generate responsive widths and use `srcset` or the framework image component.
+- Declare intrinsic dimensions to prevent layout shift.
+- Lazy-load below-fold media and preload only genuine LCP media.
+- Remove duplicate or superseded delivery assets only when ownership and references are verified.
+- Inspect important images at desktop and mobile breakpoints. Reject soft, distorted, incorrectly cropped, or oversized output.
+
+## 10. Responsive and accessible behaviour
 
 Test at minimum:
 
@@ -242,7 +282,7 @@ Requirements:
 - media that preserves aspect ratio;
 - animation based on transform and opacity where possible.
 
-## 9. Functional completion
+## 11. Functional completion
 
 Verify every navigation item, button, link, form, modal, accordion, carousel, filter, authentication action, and external destination.
 
@@ -258,7 +298,7 @@ For every asynchronous action, implement and test:
 
 No control may look active while doing nothing. No `#` links, dead buttons, unexplained disabled controls, or console errors may remain.
 
-## 10. Verification gate
+## 12. Verification gate
 
 Before handing off:
 
@@ -274,10 +314,15 @@ Before handing off:
 - verify the `/brand` page against `BRAND.md` and confirm it is unlocked in demo mode;
 - capture representative desktop and mobile screenshots;
 - inspect every important page and state visually.
+- verify motion at normal and reduced-motion settings, including cleanup, scroll smoothness, and keyboard usability;
+- verify responsive image selection, format, dimensions, crops, LCP priority, and absence of broken media;
+- run Hallmark audit and retain its structural verdict;
+- run Impeccable critique and retain before-and-after evidence;
+- run Ponytail audit and justify remaining dependencies.
 
 Report exact commands and results. If no test suite exists, say so. Do not invent a pass.
 
-## 11. Handoff
+## 13. Handoff
 
 Create a concise build report containing:
 
@@ -290,4 +335,4 @@ Create a concise build report containing:
 - unresolved decisions requiring the user;
 - exact audit target and recommended next step.
 
-Do not deploy automatically. Hand the verified build to `tangison-web-audit`. Deployment follows only after the required audit gate passes.
+Hand the verified build to `tangison-web-audit`. If deployment is requested or already authorised, continue autonomously to `tangison-web-deploy` after the audit gate passes.

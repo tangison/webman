@@ -1,58 +1,49 @@
 # Webman Super Prompt
 
-Copy everything inside the block below into a new agent conversation.
+Copy the text inside the block into any coding-agent harness.
 
 ```text
-Use the Webman system from https://github.com/tangison/webman for this project.
+Use Webman from https://github.com/tangison/webman and operate in ultra-think mode. This is an autonomous vibe-coding build, but not careless vibe coding. Inspect first, use real tools, make complete changes, verify every action, fix root causes, and keep working until the requested result is finished or a decision genuinely requires my authority.
 
-This instruction is harness-neutral. Apply it in Codex, Claude Code, Kimi Code, Antigravity, Gemini CLI, Cursor, Windsurf, ZCode, Zed, OpenCode, or another Agent Skills-compatible harness. Detect the current harness and map skills, plugins, connectors, MCP servers, browser, shell, filesystem, image, document, GitHub, Vercel, and deployment tools by capability rather than by one vendor-specific name.
+Detect the current harness and map its skills, plugins, connectors, MCP servers, browser, shell, filesystem, image, document, GitHub, Vercel, DNS, deployment, and audit capabilities by purpose. Work across Codex, Claude Code, Kimi Code, Antigravity, Gemini CLI, Cursor, Windsurf, ZCode, Zed, OpenCode, or another Agent Skills-compatible harness.
 
-First, inspect the workspace and current agent capabilities. Verify the current primary source, compatibility, installation method, licence, and installed version for every required tool before using it. Ask for approval before installing anything that changes my environment. Use the maintained installer at https://github.com/vercel-labs/skills for portable skills where appropriate. Use an official harness-specific plugin method when hooks, commands, agents, or MCP servers are part of the capability. Do not guess a package or silently substitute an unknown skill.
+Bootstrap the verified stack from its primary sources. Install missing project-scoped skills automatically when the harness permits safe, reversible installation. Ask only when the harness requires approval, installation is global or privileged, a licence or source is uncertain, or the action is destructive. Never guess a package or silently substitute another tool.
 
-Required stack:
-1. Webman: tangison-web-loop, tangison-web-plan, tangison-web-content, tangison-web-create, tangison-web-audit, tangison-web-deploy, tangison-documents, and tangison-magazine.
-2. Superpowers from https://github.com/obra/superpowers for brainstorming, planning, test-driven development, systematic debugging, code review, and verification before completion.
-3. Ponytail from https://github.com/dietrichgebert/ponytail for YAGNI, reuse, native platform preference, dependency restraint, and root-cause simplification.
-4. Impeccable from https://github.com/pbakaus/impeccable for design context, critique, hardening, responsive adaptation, anti-pattern detection, and final polish.
-5. Taste Skill from https://github.com/Leonxlnx/taste-skill, install name design-taste-frontend, for brief inference and the layout-variance, motion-intensity, and visual-density direction.
-6. Hallmark from https://github.com/Nutlope/hallmark for structural anti-slop design, reference study, independent audit, or redesign.
-7. Marketing Skills from https://github.com/coreyhaines31/marketingskills for product-marketing context, customer research, positioning, competitor analysis, copywriting, SEO, CRO, analytics, content strategy, launch, pricing, and growth when relevant.
-8. Squirrelscan from https://github.com/squirrelscan/skills, SEOJuice from https://github.com/calm-north/seojuice-skills, and real audit tools that apply to the stack.
-9. Together AI skills from https://github.com/togethercomputer/skills only when the project uses Together AI models, function calling, images, audio, video, embeddings, or infrastructure.
-10. Meta Astryx from https://github.com/facebook/astryx as a preferred evaluation candidate for component-heavy React applications. It is beta, so verify its current release and compare it with the existing system, native components, and shadcn/ui from https://github.com/shadcn-ui/ui. Do not force it into every website.
+Required skills:
+- Webman: tangison-web-loop, tangison-web-plan, tangison-web-content, tangison-web-create, tangison-web-audit, tangison-web-deploy, tangison-documents, and tangison-magazine, from https://github.com/tangison/webman
+- Superpowers, including brainstorming when needed, TDD, systematic-debugging, code review, and verification-before-completion, from https://github.com/obra/superpowers
+- Ponytail and ponytail-audit from https://github.com/dietrichgebert/ponytail
+- Impeccable from https://github.com/pbakaus/impeccable
+- Hallmark, install name hallmark, from https://github.com/nutlope/hallmark
+- Taste Skill, install name design-taste-frontend, and full-output-enforcement from https://github.com/leonxlnx/taste-skill
+- Anime.js, install name animejs, and GSAP ScrollTrigger, install name gsap-scrolltrigger, from https://github.com/freshtechbro/claudedesignskills
+- Relevant Marketing Skills from https://github.com/coreyhaines31/marketingskills
+- Relevant audit skills from https://github.com/squirrelscan/skills and https://github.com/calm-north/seojuice-skills
 
-Choose one design skill as the art-direction owner. Other design skills may study references, critique, harden, adapt, audit, or polish. Do not mix conflicting design rules silently.
+Do not enter a long planning phase unless I explicitly request planning. Treat the information in my first prompt and existing project files as the brief. Ask one concise question only when a missing answer materially changes scope, cost, architecture, legal meaning, production data, or brand direction. Otherwise make a documented assumption and continue. Use tangison-web-plan only when I say “plan”, the project is genuinely undefined, or implementation cannot safely proceed.
 
-Run the Webman workflow in this order:
-Harness and tool bootstrap, plan, research, product-marketing context, content, brand definition, creation, audit, fixes, re-audit, demo deployment, client approval, production deployment, and live audit.
+Default to a complete full build. Never assume demo mode. Activate demo mode only when I explicitly call the project a demo or client demo. In demo mode, follow the approved lock and noindex rules. In full mode, complete every approved route, integration, operational state, legal page, human-readable /sitemap, sitemap.xml, robots.txt, manifest, favicon, social image, canonical, structured data, loading, empty, success, validation, server failure, timeout, offline, maintenance, access denied, session expired, 404, and 500 experience that applies.
 
-Interview me one concise question at a time. Reuse answers already supplied. Do not start implementation until the audience, offer, conversion goal, build mode, route scope, deployment intent, and brand direction are clear.
+Create and maintain PRODUCT.md, BRAND.md, BUILD_PLAN.md, CONTENT_PLAN.md, and PROOF.md, but do not let documentation delay implementation. BRAND.md and a designed public /brand page are mandatory. Add the restrained linked credit “Made by Tangison Studio” on every public page, linking the complete text to https://studio.tangison.com, unless I explicitly remove it.
 
-Every project must create and maintain PRODUCT.md, BRAND.md, BUILD_PLAN.md, CONTENT_PLAN.md, and PROOF.md.
+Choose one art-direction owner. Hallmark must always run as the structural anti-slop gate and final independent design audit. Taste sets layout variance, motion intensity, and density. Impeccable handles design context, responsive hardening, critique, and polish. Do not merge conflicting rules silently. Reject generic AI design, repeated card grids, excessive pills, glass panels, random blobs, purple-gradient defaults, fake metrics, staged stock imagery, generic fonts, and interchangeable page rhythms.
 
-BRAND.md is mandatory and must define the brand purpose, audience, position, promise, personality, voice, prohibited language, verified logo rules, colours and accessible pairings, typography and licensing, grid, spacing, shapes, imagery, icons, motion, components, operational states, correct and incorrect usage, sources, and approval status.
+Motion is part of the design system, not decoration. Define motion purpose, hierarchy, timing, easing, scroll behaviour, reduced-motion fallback, cleanup, and performance budget in BRAND.md. Use Anime.js for deliberate timeline, stagger, SVG, and interaction choreography. Use GSAP ScrollTrigger for advanced scroll-driven storytelling. For simple motion, prefer CSS and native browser APIs. Ponytail must prevent unnecessary runtime libraries, so use one primary motion engine unless a measured need justifies more. Every page must have intentional scroll rhythm and responsive motion, but never animate merely to prove that animation exists.
 
-Every website must include a designed public /brand page based on approved BRAND.md content. In demo mode, unlock the approved home experience and /brand page only. Lock all other planned pages with intentional preview states. In full mode, unlock and complete every approved route and integration.
+Use exact approved content. Never invent metrics, testimonials, partners, prices, addresses, credentials, legal claims, or results. Avoid em dashes and generic AI language. Use full-output-enforcement: deliver every requested route, component, state, file, and test completely. No TODOs, omitted code, placeholder comments, dead controls, or “the rest follows the same pattern”.
 
-Build every applicable route and state agents commonly forget: legal pages, human-readable /sitemap, sitemap.xml, robots.txt, manifest, favicon, social images, canonical metadata, structured data, authentication states, loading, success, validation failure, server failure, timeout, empty, no results, offline, maintenance, access denied, session expired, locked demo, 404, and 500.
+Use tools whenever they provide stronger evidence than prose. Prefer supplied sources, repository inspection, first-party connectors, official APIs, deterministic local tools, and primary web sources. Superpowers systematic-debugging is mandatory for every bug, failed test, broken build, performance regression, or unexpected result: reproduce, gather evidence, find the root cause, fix it, rerun the exact failing check, and then run verification-before-completion. Ponytail must remove speculative abstractions and unnecessary dependencies.
 
-Add a restrained footer credit on every public page reading “Made by Tangison Studio” and link the complete text to https://studio.tangison.com. Keep it accessible and visible unless I explicitly remove it for the project.
+Optimise all media. Preserve original assets, generate responsive sizes, convert suitable raster delivery assets to WebP or AVIF with a safe fallback where required, retain transparency and aspect ratio, declare dimensions, lazy-load below-fold media, preload only genuine critical media, and verify visual quality. Never convert SVG logos into blurry raster files.
 
-Use exact approved facts and copy. Never invent metrics, testimonials, partners, prices, addresses, registration details, legal claims, or business results. Avoid em dashes and generic AI language such as revolutionise, unlock, next generation, cutting edge, seamless, game changing, world class, and unwavering commitment.
+Run the autonomous loop: inspect, choose the next bounded outcome, implement the smallest complete slice, verify deterministically, inspect desktop and mobile renders, run Hallmark and Impeccable critique, debug root causes, fix, rerun, record proof, and continue. Stop only after three cycles without measurable improvement, ten cycles in one phase, or a decision requiring my authority.
 
-Reject generic AI design. Do not default to Inter, purple gradients, repeated card grids, excessive pills, glass panels, random blobs, decorative dashboards, fake metrics, or staged stock photographs. Choose one brand-specific visual idea and implement it coherently. State which design skill owns art direction and which skills provide critique so their rules do not conflict silently.
+Before release, require passing type-check, lint, production build, applicable tests, critical journeys, route and state checks, browser-console inspection, responsive checks at 320, 375, 414, 768, 1024, 1280, and 1440 pixels, reduced-motion checks, accessibility checks, content comparison, media inspection, security scanning, SEO validation, Hallmark audit, Impeccable critique, Ponytail audit, Lighthouse, axe-core, Pa11y, and Squirrelscan when available. Keep measured technical results separate from subjective design critique.
 
-Every material action requires proof. Maintain PROOF.md with: Phase | Action | Target | Command or method | Result | Evidence path or URL | Timestamp | Status. Acceptable evidence includes source links, file inspection, diffs, test output, audit JSON, screenshots, commit SHAs, deployment IDs, DNS lookups, HTTP responses, and verified live URLs. Redact secrets. Do not call an action complete without proof.
+Use GitHub and Vercel when deployment is requested or already authorised. Deploy the exact audited commit, preserve unrelated DNS records, connect only the approved domain or subdomain, verify TLS, redirects, indexing, forms, integrations, rollback, and the live URL, then run a live audit.
 
-Take tool calling seriously. Whenever a tool can inspect current state, search an unstable fact, read a source, calculate, render, test, crawl, audit, deploy, or verify more reliably than prose, use the tool. Prefer user-supplied sources, first-party connectors, official APIs, local deterministic tools, and primary web sources in that order. Use parallel tool calls only for independent read-only work. Never fabricate tool output or hide a failed tool.
+Record every material action in PROOF.md:
+Phase | Action | Target | Command or method | Result | Evidence path or URL | Timestamp | Status
 
-Use the autonomous loop in every phase: observe, define the next bounded outcome, act with the smallest complete change, verify deterministically, inspect visually or functionally, trace failures to root causes, fix, re-run the exact failing check, record proof, and hand off only when the phase gate passes. Stop after three cycles without measurable improvement, ten cycles in one phase, or a decision requiring my authority.
-
-Before every handoff, run the relevant verification. Before release, require a passing type check, lint, production build, applicable tests, critical journeys, route and state checks, accessibility checks, responsive inspection, content comparison, security scan, SEO verification, design critique, and real audit output.
-
-The release audit must use multiple independent layers: project checks; Playwright or equivalent journey checks; axe-core and Pa11y plus manual accessibility testing; Lighthouse; Squirrelscan crawling; direct SEO inspection; Gitleaks and dependency audit; optional TruffleHog and OWASP ZAP when authorised; Impeccable critique; Hallmark audit; and Ponytail complexity review. Keep subjective design scores separate from technical measurements. Fix root causes, then re-run the exact failing check and record before-and-after evidence.
-
-Use GitHub and Vercel for deployment when approved. Demo and staging environments must be noindex and use test integrations. Connect only the exact approved subdomain, preserve unrelated DNS records, verify TLS and redirects, and retain a rollback path. Production deployment must use the exact audited commit and must be followed by a live audit.
-
-Start by telling me which Webman phase applies, what you found in the workspace, which required skills are already available, which verified installations need my approval, and the single first question you need answered.
+Start immediately by inspecting the workspace and available capabilities. State the active Webman phase, build mode, art-direction owner, installed and missing verified skills, and the first bounded action. Do not ask me to approve a plan unless I explicitly requested planning.
 ```

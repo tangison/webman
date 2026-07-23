@@ -2,7 +2,7 @@
 
 An evidence-led website and document production system for strategy, content, brand definition, creation, auditing, deployment, and premium document production.
 
-Webman uses portable Agent Skills and is designed for Codex, Claude Code, Kimi Code, Antigravity, Gemini CLI, Cursor, Windsurf, ZCode, Zed, OpenCode, and other compatible harnesses. It discovers available tools, installs approved specialist skills from verified primary sources, iterates autonomously, and requires proof for every completion claim.
+Webman uses portable Agent Skills and is designed for Codex, Claude Code, Kimi Code, Antigravity, Gemini CLI, Cursor, Windsurf, ZCode, Zed, OpenCode, and other compatible harnesses. It discovers available tools, installs verified project-scoped skills, defaults to autonomous full builds, uses planning only when requested or blocking, and requires proof for every completion claim.
 
 ## Install
 
@@ -30,19 +30,19 @@ Or select an individual skill when prompted.
 ## Workflow
 
 ```text
-Plan
+Inspect and bootstrap
+Plan only when requested or blocking
 Content
+Brand definition
 Create
 Audit
 Fix and re-audit
-Demo deployment
-Client approval
-Production deployment
+Deploy when requested
 Live audit
 ```
 
-The specialist skills can also be invoked independently.
+Demo mode is never assumed. It activates only when the user explicitly requests a demo. The specialist skills can also be invoked independently.
 
 ## Start a complete project
 
-Copy the master invocation from [`SUPER_PROMPT.md`](SUPER_PROMPT.md). It tells the agent to verify the tool stack, create the brand guidelines and brand page, run the full workflow, and prove every completed action.
+Copy the master invocation from [`SUPER_PROMPT.md`](SUPER_PROMPT.md). It connects Webman with Superpowers, Ponytail, Hallmark, Impeccable, Taste, full-output enforcement, Anime.js, GSAP ScrollTrigger, marketing, auditing, GitHub, and Vercel while keeping one proof ledger.

@@ -1,6 +1,6 @@
 ---
 name: tangison-web-content
-description: Research, plan, write, rewrite, verify, and organise human-sounding website content for new builds, redesigns, client demos, company sites, stores, portals, landing pages, blogs, case studies, and SEO pages. Use when an agent must consume an approved product and build plan, interview the user, create a page-by-page content system, remove generic AI copy, preserve verified facts, write exact production copy, and prepare metadata, calls to action, forms, image direction, and content for implementation.
+description: Autonomously research, structure, write, rewrite, verify, and organise human-sounding website content for full builds, redesigns, explicit client demos, stores, portals, landing pages, blogs, case studies, and SEO pages. Use the user's brief, existing project, verified sources, and available Webman files to create exact production copy, metadata, interface states, calls to action, image direction, and a page-by-page content system without forcing a separate planning phase.
 ---
 
 # Tangison Web Content
@@ -15,7 +15,7 @@ Iterate through `collect, verify, structure, draft, remove generic language, fit
 
 ## Interview
 
-Confirm pages, audience, conversion, voice, approver, official business facts, services, prices, contacts, locations, hours, policies, team, credentials, proof, existing content, SEO goals, target markets, and prohibited claims. If something is already answered, do not ask it again.
+Inspect pages, audience, conversion, voice, official business facts, services, prices, contacts, locations, hours, policies, team, credentials, proof, existing content, SEO goals, target markets, and prohibited claims. Reuse everything already answered. Ask one concise question only when a missing fact materially changes published meaning or creates legal, financial, brand, or operational risk. Otherwise mark the gap and continue without filler.
 
 ## Sources and facts
 

@@ -1,31 +1,33 @@
 ---
 name: tangison-web-plan
-description: Plan new websites, redesigns, migrations, portals, stores, client demos, and substantial web features before implementation. Use when an agent must interview the user, research the organisation and market, inspect an existing repository, define positioning, pages, content, architecture, integrations, audit targets, GitHub and Vercel requirements, demo subdomains, milestones, risks, and acceptance criteria without writing production code.
+description: Plan new websites, redesigns, migrations, portals, stores, explicit client demos, and substantial web features when the user asks for planning or when unresolved requirements make implementation unsafe. Use for read-only discovery, research, positioning, routes, architecture, integrations, deployment decisions, risks, and acceptance criteria. Do not invoke automatically for a sufficiently detailed build request.
 ---
 
 # Tangison Web Plan
 
-Plan the website completely before implementation. Remain read-only. Do not install packages, edit production code, create repositories, deploy, or change DNS.
+Plan only when requested or genuinely blocking. Remain read-only. Do not install packages, edit production code, create repositories, deploy, or change DNS.
 
 ## Universal operating foundation
 
 This skill is harness-neutral. Discover the current harness, repository tools, web research, browser, connectors, and shell capabilities, then use the strongest available tool for each fact. Do not answer an inspectable question from memory. Cite unstable external facts and record evidence in `PROOF.md`.
 
-Iterate through `discover, interview, research, model, challenge, revise, verify, approve`. Revisit earlier assumptions whenever evidence changes the route scope, brand, architecture, cost, or launch plan. Stop after three cycles without meaningful improvement, ten cycles total, or a decision requiring user authority.
+Iterate through `discover, interview only where necessary, research, model, challenge, revise, verify`. Revisit earlier assumptions whenever evidence changes route scope, brand, architecture, cost, or launch. Stop after three cycles without meaningful improvement, ten cycles total, or a decision requiring user authority.
 
-## Mandatory interview
+The user's first prompt, existing files, prior decisions, and repository are the brief. Do not turn a detailed request into a long interview. Ask one concise question only when the missing answer materially changes scope, cost, architecture, legal meaning, production data, deployment authority, or brand direction.
 
-Confirm in compact groups:
+## Conditional interview
 
-1. Project type: new site, redesign, migration, demo, portal, store, or feature.
+Inspect first. Confirm only unresolved critical items:
+
+1. Project type: new site, redesign, migration, full build, explicit demo, portal, store, or feature.
 2. Organisation, offer, audience, business objective, and primary conversion.
 3. Existing website, repository, working systems, and anything that must remain.
 4. Required pages, functions, user roles, forms, database, search, payments, email, analytics, and integrations.
 5. Approved logo, colours, fonts, imagery, references, desired character, and rejected styles.
 6. Content readiness, facts, claims, services, prices, contacts, case studies, testimonials, and approval owner.
-7. GitHub owner, Vercel team, demo mode, demo subdomain, production domain, DNS provider, deadline, and rollback expectations.
+7. GitHub owner, Vercel team, deployment target, production domain, DNS provider, deadline, and rollback expectations. Ask about demo details only when the user explicitly requested a demo.
 
-If answers already exist, summarize them and ask only what remains. Do not complete the plan until output scope, page scope, brand source, conversion goal, and deployment intent are clear.
+If answers already exist, reuse them. When a non-critical detail is absent, label a reasonable assumption and continue.
 
 ## Existing-project discovery
 
@@ -89,6 +91,8 @@ For each page identify the audience question, promise, facts, proof, CTA, search
 
 Define typography character, colour logic, grid, spacing, shape language, imagery, icon system, motion intensity, density, navigation, buttons, mobile composition, and accessibility. State what makes the project specific to this brand.
 
+Define the scroll and motion system in operational terms: purpose, hierarchy, page-entry behaviour, section reveals, continuity between sections, interaction feedback, timing, easing, reduced-motion fallback, cleanup, and performance budget. Select CSS and native APIs for simple motion, Anime.js for deliberate timelines, staggers, SVG, and interaction choreography, or GSAP ScrollTrigger for advanced scrollytelling. Plan one primary runtime motion engine unless a measured requirement justifies more.
+
 Reject generic centred startup heroes, gradient text, glassmorphism, random blobs, excessive pills, repeated card grids, fake metrics, generic testimonials, default startup palettes, and template footers unless the brief specifically justifies them.
 
 Avoid em dashes and generic AI copy.
@@ -111,7 +115,7 @@ Create `BRAND.md` with:
 - examples of correct and incorrect application;
 - source and approval status for every identity decision.
 
-Plan a `/brand` route containing the approved public expression of the identity. It must be unlocked in demo mode alongside the approved home experience. Exclude confidential internal rules from the public page.
+Plan a `/brand` route containing the approved public expression of the identity. In explicitly requested demo mode it remains unlocked alongside the approved home experience. Exclude confidential internal rules from the public page.
 
 ## Architecture
 
@@ -121,9 +125,9 @@ Do not select a dependency or service merely because Tangison has used it before
 
 For React interfaces, explicitly evaluate Meta Astryx from `https://github.com/facebook/astryx` against the existing system, native components, shadcn/ui, bundle cost, beta risk, accessibility, brand flexibility, and ownership. Prefer Astryx for component-heavy product interfaces when the evidence supports it. Do not force it into bespoke marketing pages or non-React projects.
 
-## Demo planning
+## Explicit demo planning
 
-Define whether the demo is:
+Skip this section unless the user explicitly requested a demo. When requested, define whether the demo is:
 
 - Hero-only concept.
 - Hero plus brand page.
@@ -151,4 +155,4 @@ Create `BRAND.md` with the complete identity system and public brand-page brief.
 
 Create `BUILD_PLAN.md` with repository state, stack, routes, demo locks, features, journeys, content needs, components, data, integrations, SEO, analytics, security, deployment, milestones, audit targets, risks, acceptance criteria, and human approval points.
 
-End with Confirmed, Assumptions, Needs confirmation, Milestones, Acceptance criteria, and an approval gate. Do not begin implementation automatically.
+End with Confirmed, Assumptions, Needs confirmation, Milestones, and Acceptance criteria. If the user requested planning only, stop. Otherwise hand the working documents back to `tangison-web-loop` so autonomous implementation can continue without requesting ceremonial plan approval.

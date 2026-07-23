@@ -27,7 +27,7 @@ Ask one concise question at a time until these are known:
 - analytics or Search Console access available;
 - user-approved tools that upload URLs or data to third parties.
 
-Default to report only when the user asks for an audit without asking for fixes.
+Default to report only when the user asks for an isolated audit without asking for fixes. When invoked inside an authorised full build, redesign, repair, or release workflow, use audit-and-fix mode for in-scope repository changes.
 
 ## 2. Establish the baseline
 
@@ -37,7 +37,7 @@ If no test suite exists, report `No test suite present`. Do not convert that int
 
 ## 3. Run applicable checks
 
-Use installed real tools. If a listed tool is unavailable, install it only with user approval or report the gap.
+Use installed real tools. Install verified project-scoped audit skills automatically when the harness permits safe, reversible installation. Ask only when installation is global, privileged, destructive, licence-sensitive, uncertain, or blocked by the harness. Report every remaining gap.
 
 ### Independent audit stack
 
@@ -49,16 +49,19 @@ Run a layered stack rather than trusting one score:
 4. Performance: Lighthouse plus framework or browser profiling where needed.
 5. Crawl and SEO: Squirrelscan, Lighthouse SEO, direct HTML inspection, sitemap and robots validation, and SEOJuice methods when the required data exists.
 6. Security: Gitleaks, ecosystem dependency audit, optional TruffleHog verification, header checks, and OWASP ZAP only when authorised and safe for the target.
-7. Design quality: Impeccable audit and critique plus Hallmark audit when installed.
+7. Design quality: mandatory Hallmark structural audit plus Impeccable audit and critique.
 8. Simplicity: Ponytail audit or an equivalent repo-wide complexity pass.
 9. Content: exact comparison to approved sources, marketing context, and legal or policy inputs.
+10. Motion and scroll: purpose, implementation, reduced-motion behaviour, cleanup, performance, interruption, keyboard use, and mobile behaviour.
+11. Media: delivery formats, responsive sources, dimensions, aspect ratio, crop quality, LCP priority, lazy loading, duplicates, and broken assets.
 
 Primary sources:
 
 - `https://github.com/squirrelscan/skills`
 - `https://github.com/calm-north/seojuice-skills`
 - `https://github.com/pbakaus/impeccable`
-- `https://github.com/Nutlope/hallmark`
+- `https://github.com/nutlope/hallmark`
+- `https://github.com/freshtechbro/claudedesignskills`
 - `https://github.com/dietrichgebert/ponytail`
 - `https://github.com/GoogleChrome/lighthouse`
 - `https://github.com/dequelabs/axe-core`
@@ -138,11 +141,29 @@ Never print or paste discovered secrets into the report. Redact them and name on
 - Flag generic AI copy, fabricated proof, em dashes, repeated sentence patterns, empty superlatives, and placeholder text.
 - Inspect for generic gradient heroes, repetitive card grids, excessive pills, glassmorphism without purpose, arbitrary icons, and template-like repetition.
 - Verify every public page includes a visible, accessible `Made by Tangison Studio` credit linked to `https://studio.tangison.com`, unless the user explicitly removed it for that project.
-- Use a design critique tool when installed, but keep its subjective score separate from measured technical results.
+- Run Hallmark as an independent structural anti-slop gate and retain its verdict. Run Impeccable for design-context, responsive, theming, accessibility, and polish findings. Keep subjective scores separate from measured technical results.
+
+### Motion and scroll
+
+- Identify the primary motion engine and flag unnecessary runtime duplication.
+- Confirm every animation serves hierarchy, continuity, feedback, or storytelling.
+- Test route transitions, section reveals, hover and focus feedback, timelines, staggers, pinned sections, parallax, and asynchronous-state motion where present.
+- Test normal and `prefers-reduced-motion: reduce` modes.
+- Check cleanup on unmount and route changes, resize behaviour, deep links, back and forward navigation, and repeated visits.
+- Profile forced reflow, layout shift, dropped frames, scroll-linked work, long tasks, battery-heavy loops, and oversized animation dependencies.
+- Fail development markers, purposeless infinite loops, animation that delays core content, scroll hijacking, inaccessible motion, or movement that makes the page harder to understand.
+
+### Media delivery
+
+- Inventory raster, vector, video, and font assets and trace their use.
+- Confirm suitable raster delivery assets use WebP or AVIF with a justified fallback where needed.
+- Keep SVG logos and icons vector-based.
+- Verify responsive widths, intrinsic dimensions, aspect ratio, crop, art direction, lazy loading, decode behaviour, LCP priority, compression quality, alt text, captions, and credits.
+- Flag source images delivered at excessive dimensions, duplicate exports, broken files, blurry conversions, missing transparency, and mobile crops that lose the subject.
 
 ## 4. Optional broad crawler
 
-If Squirrelscan is installed and the user approves its use, run quick coverage first, surface coverage next, and full coverage before sign-off. Treat its output as one evidence source, not the sole authority. Record the audit ID and use diff mode for regression checks.
+If Squirrelscan is installed and the target is public or its crawl is already authorised, run quick coverage first, surface coverage next, and full coverage before sign-off. Ask before sending a private, authenticated, staging, or access-controlled target to an external crawler. Treat its output as one evidence source, not the sole authority. Record the audit ID and use diff mode for regression checks.
 
 For a public release, prefer quick coverage for diagnosis, surface coverage after the first fix batch, and full coverage for final verification. If the full crawl is impossible, report the exact limitation and affected route patterns.
 

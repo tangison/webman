@@ -1,6 +1,6 @@
 # Webman Skill and Tool Stack
 
-Verify every repository, install command, release, licence, and compatibility from its primary source immediately before installation. Ask for approval before changing the user’s environment. Install only the capabilities the project needs, then prove each installation.
+Verify every repository, install command, release, licence, and compatibility from its primary source immediately before installation. Install the verified Webman foundation at project scope automatically when the harness permits a safe, reversible change. Ask only for global, privileged, destructive, licence-sensitive, uncertain, or harness-blocked installation. Prove every installation and invocation.
 
 ## Portable skill infrastructure
 
@@ -22,7 +22,7 @@ npx skills add OWNER/REPOSITORY --skill SKILL_NAME
 npx skills list
 ```
 
-Do not add `--all`, `--global`, `--yes`, or multiple harness targets without user approval.
+Use only the current harness and project scope by default. Do not add `--global`, target unrelated harnesses, or modify shared configuration without explicit authority.
 
 ## Webman foundation
 
@@ -67,11 +67,43 @@ Choose one skill as art-direction owner. Others may critique, study references, 
 
 ### Hallmark by Together AI
 
-- Source: `https://github.com/Nutlope/hallmark`
-- Install: `npx skills add nutlope/hallmark`
+- Source: `https://github.com/nutlope/hallmark`
+- Install name: `hallmark`
+- Install: `npx skills add https://github.com/nutlope/hallmark --skill hallmark`
 - Purpose: build, audit, redesign, or study interface structure while rejecting generic AI patterns.
-- Use: `hallmark study` for reference extraction, Hallmark as art-direction owner when selected, or `hallmark audit` as an independent anti-slop check.
+- Required use: `hallmark study` for approved references when useful, Hallmark as art-direction owner when selected, structural pre-emit critique during creation, and `hallmark audit` as an independent final anti-slop gate.
 - Proof: selected macrostructure or study output, slop-test result, and before-and-after render evidence.
+
+### Full-output enforcement
+
+- Source: `https://github.com/leonxlnx/taste-skill`
+- Install name: `full-output-enforcement`
+- Install: `npx skills add https://github.com/leonxlnx/taste-skill --skill full-output-enforcement`
+- Purpose: require complete files, routes, components, states, and tests without TODOs, omitted code, placeholder comments, skeletons, or prose shortcuts.
+- Required use: all creation, repair, migration, and handoff phases.
+- Proof: deliverable count matches the request and automated search finds no prohibited omission markers.
+
+## Motion and scroll
+
+Motion is a required design-system decision, but runtime dependencies remain subject to Ponytail. Install the skills so the agent can choose correctly. Use one primary runtime engine unless a measured requirement justifies more.
+
+### Anime.js
+
+- Source: `https://github.com/freshtechbro/claudedesignskills`
+- Install name: `animejs`
+- Install: `npx skills add https://github.com/freshtechbro/claudedesignskills --skill animejs`
+- Purpose: framework-neutral timelines, staggers, keyframes, SVG drawing and morphing, and deliberate interaction choreography.
+- Use: when CSS or native APIs are insufficient and the design needs sequenced motion.
+- Proof: motion specification, dependency decision, representative animation capture, reduced-motion result, cleanup test, and performance evidence.
+
+### GSAP ScrollTrigger
+
+- Source: `https://github.com/freshtechbro/claudedesignskills`
+- Install name: `gsap-scrolltrigger`
+- Install: `npx skills add https://github.com/freshtechbro/claudedesignskills --skill gsap-scrolltrigger`
+- Purpose: advanced scroll-driven storytelling, coordinated timelines, pinning, scrubbing, parallax, SVG, Canvas, WebGL, and Three.js integration.
+- Use: only when the approved concept needs advanced scrollytelling. For simple reveals, prefer CSS and IntersectionObserver.
+- Proof: scroll map, breakpoint behaviour, refresh and cleanup test, reduced-motion fallback, frame-performance evidence, and screenshots or capture.
 
 ### Anthropic frontend design
 
