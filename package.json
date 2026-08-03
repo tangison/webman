@@ -1,0 +1,12 @@
+{
+  "name": "tangison-universal-skills-v2",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Proof-first portable Tangison Studio skill library",
+  "type": "module",
+  "scripts": {
+    "build:manifest": "node scripts/build-manifest.mjs --write",
+    "validate": "node scripts/validate.mjs"
+  },
+  "license": "MIT"
+}

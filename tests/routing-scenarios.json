@@ -1,0 +1,234 @@
+{
+  "schema_version": 2,
+  "test_type": "deterministic routing inspection",
+  "live_model_tested": false,
+  "scenarios": [
+    {
+      "id": 1,
+      "scenario": "New marketing website with supplied logo and copy",
+      "owner": "tangison-web-plan",
+      "supporters": [
+        "tangison-web-loop",
+        "tangison-brand-identity",
+        "tangison-web-build",
+        "tangison-web-audit"
+      ],
+      "authority_gate": "Apply the owner skill's explicit authority gates.",
+      "proof": "Record action, result, evidence, interpretation, and remaining risk in PROOF.md.",
+      "completion": "All approved outputs pass the owner verification gate after the latest change."
+    },
+    {
+      "id": 2,
+      "scenario": "Existing broken Next.js website",
+      "owner": "tangison-web-build",
+      "supporters": [
+        "tangison-web-audit",
+        "tangison-full-output-enforcement"
+      ],
+      "authority_gate": "Apply the owner skill's explicit authority gates.",
+      "proof": "Record action, result, evidence, interpretation, and remaining risk in PROOF.md.",
+      "completion": "All approved outputs pass the owner verification gate after the latest change."
+    },
+    {
+      "id": 3,
+      "scenario": "Website audit only with no fixes authorised",
+      "owner": "tangison-web-audit",
+      "supporters": [],
+      "authority_gate": "Apply the owner skill's explicit authority gates.",
+      "proof": "Record action, result, evidence, interpretation, and remaining risk in PROOF.md.",
+      "completion": "All approved outputs pass the owner verification gate after the latest change."
+    },
+    {
+      "id": 4,
+      "scenario": "Full website build and deployment",
+      "owner": "tangison-web-loop",
+      "supporters": [
+        "tangison-web-plan",
+        "tangison-web-build",
+        "tangison-web-audit",
+        "tangison-web-deploy"
+      ],
+      "authority_gate": "Apply the owner skill's explicit authority gates.",
+      "proof": "Record action, result, evidence, interpretation, and remaining risk in PROOF.md.",
+      "completion": "All approved outputs pass the owner verification gate after the latest change."
+    },
+    {
+      "id": 5,
+      "scenario": "Social-media case-study graphic",
+      "owner": "tangison-social-design",
+      "supporters": [
+        "tangison-brand-identity",
+        "tangison-anti-ai-slop"
+      ],
+      "authority_gate": "Apply the owner skill's explicit authority gates.",
+      "proof": "Record action, result, evidence, interpretation, and remaining risk in PROOF.md.",
+      "completion": "All approved outputs pass the owner verification gate after the latest change."
+    },
+    {
+      "id": 6,
+      "scenario": "New company logo",
+      "owner": "tangison-brand-identity",
+      "supporters": [
+        "tangison-vectorgraphics",
+        "tangison-anti-ai-slop"
+      ],
+      "authority_gate": "Apply the owner skill's explicit authority gates.",
+      "proof": "Record action, result, evidence, interpretation, and remaining risk in PROOF.md.",
+      "completion": "All approved outputs pass the owner verification gate after the latest change."
+    },
+    {
+      "id": 7,
+      "scenario": "Company profile",
+      "owner": "tangison-magazine",
+      "supporters": [
+        "tangison-research",
+        "tangison-anti-ai-slop"
+      ],
+      "authority_gate": "Apply the owner skill's explicit authority gates.",
+      "proof": "Record action, result, evidence, interpretation, and remaining risk in PROOF.md.",
+      "completion": "All approved outputs pass the owner verification gate after the latest change."
+    },
+    {
+      "id": 8,
+      "scenario": "Formal business letter",
+      "owner": "tangison-documents",
+      "supporters": [
+        "tangison-research"
+      ],
+      "authority_gate": "Apply the owner skill's explicit authority gates.",
+      "proof": "Record action, result, evidence, interpretation, and remaining risk in PROOF.md.",
+      "completion": "All approved outputs pass the owner verification gate after the latest change."
+    },
+    {
+      "id": 9,
+      "scenario": "Business plan for Namibian funding",
+      "owner": "tangison-business-plan",
+      "supporters": [
+        "tangison-research",
+        "tangison-financial-model",
+        "tangison-funding-application"
+      ],
+      "authority_gate": "Apply the owner skill's explicit authority gates.",
+      "proof": "Record action, result, evidence, interpretation, and remaining risk in PROOF.md.",
+      "completion": "All approved outputs pass the owner verification gate after the latest change."
+    },
+    {
+      "id": 10,
+      "scenario": "Financial projections",
+      "owner": "tangison-financial-model",
+      "supporters": [
+        "tangison-business-plan"
+      ],
+      "authority_gate": "Apply the owner skill's explicit authority gates.",
+      "proof": "Record action, result, evidence, interpretation, and remaining risk in PROOF.md.",
+      "completion": "All approved outputs pass the owner verification gate after the latest change."
+    },
+    {
+      "id": 11,
+      "scenario": "Photographed government document restoration",
+      "owner": "tangison-documents",
+      "supporters": [],
+      "authority_gate": "Apply the owner skill's explicit authority gates.",
+      "proof": "Record action, result, evidence, interpretation, and remaining risk in PROOF.md.",
+      "completion": "All approved outputs pass the owner verification gate after the latest change."
+    },
+    {
+      "id": 12,
+      "scenario": "Starter repository handoff",
+      "owner": "tangison-project-launchpad",
+      "supporters": [
+        "tangison-full-output-enforcement"
+      ],
+      "authority_gate": "Apply the owner skill's explicit authority gates.",
+      "proof": "Record action, result, evidence, interpretation, and remaining risk in PROOF.md.",
+      "completion": "All approved outputs pass the owner verification gate after the latest change."
+    },
+    {
+      "id": 13,
+      "scenario": "Chat-only harness",
+      "owner": "tangison-harness-adapter",
+      "supporters": [
+        "tangison-studio-router"
+      ],
+      "authority_gate": "Apply the owner skill's explicit authority gates.",
+      "proof": "Record action, result, evidence, interpretation, and remaining risk in PROOF.md.",
+      "completion": "All approved outputs pass the owner verification gate after the latest change."
+    },
+    {
+      "id": 14,
+      "scenario": "ZCode with GLM model",
+      "owner": "tangison-harness-adapter",
+      "supporters": [
+        "tangison-studio-router",
+        "tangison-full-output-enforcement"
+      ],
+      "authority_gate": "Apply the owner skill's explicit authority gates.",
+      "proof": "Record action, result, evidence, interpretation, and remaining risk in PROOF.md.",
+      "completion": "All approved outputs pass the owner verification gate after the latest change."
+    },
+    {
+      "id": 15,
+      "scenario": "Harness with no browser",
+      "owner": "tangison-harness-adapter",
+      "supporters": [
+        "tangison-research"
+      ],
+      "authority_gate": "Apply the owner skill's explicit authority gates.",
+      "proof": "Record action, result, evidence, interpretation, and remaining risk in PROOF.md.",
+      "completion": "All approved outputs pass the owner verification gate after the latest change."
+    },
+    {
+      "id": 16,
+      "scenario": "Harness with no shell",
+      "owner": "tangison-harness-adapter",
+      "supporters": [
+        "tangison-studio-router"
+      ],
+      "authority_gate": "Apply the owner skill's explicit authority gates.",
+      "proof": "Record action, result, evidence, interpretation, and remaining risk in PROOF.md.",
+      "completion": "All approved outputs pass the owner verification gate after the latest change."
+    },
+    {
+      "id": 17,
+      "scenario": "Missing official logo",
+      "owner": "tangison-brand-identity",
+      "supporters": [
+        "tangison-project-launchpad"
+      ],
+      "authority_gate": "Apply the owner skill's explicit authority gates.",
+      "proof": "Record action, result, evidence, interpretation, and remaining risk in PROOF.md.",
+      "completion": "All approved outputs pass the owner verification gate after the latest change."
+    },
+    {
+      "id": 18,
+      "scenario": "Conflicting source facts",
+      "owner": "tangison-research",
+      "supporters": [],
+      "authority_gate": "Apply the owner skill's explicit authority gates.",
+      "proof": "Record action, result, evidence, interpretation, and remaining risk in PROOF.md.",
+      "completion": "All approved outputs pass the owner verification gate after the latest change."
+    },
+    {
+      "id": 19,
+      "scenario": "Failed build",
+      "owner": "tangison-web-build",
+      "supporters": [
+        "tangison-web-audit"
+      ],
+      "authority_gate": "Apply the owner skill's explicit authority gates.",
+      "proof": "Record action, result, evidence, interpretation, and remaining risk in PROOF.md.",
+      "completion": "All approved outputs pass the owner verification gate after the latest change."
+    },
+    {
+      "id": 20,
+      "scenario": "Context limit during complete deliverable",
+      "owner": "tangison-full-output-enforcement",
+      "supporters": [
+        "tangison-web-loop"
+      ],
+      "authority_gate": "Apply the owner skill's explicit authority gates.",
+      "proof": "Record action, result, evidence, interpretation, and remaining risk in PROOF.md.",
+      "completion": "All approved outputs pass the owner verification gate after the latest change."
+    }
+  ]
+}

@@ -1,168 +1,116 @@
 ---
 name: tangison-web-deploy
-description: Deploy audited client websites through GitHub and Vercel, create safe preview or demo deployments, connect approved subdomains, configure environment variables and DNS, verify the live site, and preserve a rollback path. Use only after the Tangison web audit release gate passes.
+description: Deploy an exact audited website commit and verify production behaviour. Use only when deployment is requested or already authorised, including preview, production, domain, TLS, redirect, indexing, integration, rollback, and live-audit work.
 ---
 
 # Tangison Web Deploy
 
-Deploy deliberately. A successful command is not a successful launch. The live URL, environment, DNS, indexing, forms, integrations, and rollback path must all be verified.
+## Purpose
 
-## Universal operating foundation
+Release the audited commit without changing unrelated DNS or production state and prove that the live result matches the intended revision.
 
-This skill is harness-neutral. Use the authenticated GitHub, Vercel, DNS, registrar, secret-store, shell, HTTP, browser, and monitoring capabilities actually available. Prefer first-party connectors or official CLIs. Never expose a credential to make a tool call convenient.
+**A completion claim without evidence is invalid.**
 
-Iterate through `preflight, preview, verify, configure, deploy, inspect live state, audit, correct, re-deploy, record`. A deployment is complete only when the intended commit, domain, TLS, environment, journeys, indexing policy, and rollback evidence all pass.
+## Use this skill when
 
-## 1. Confirm authority and target
+- A verified commit is authorised for preview or production.
+- A domain or release must be connected and checked.
+- Rollback readiness and live verification are required.
 
-Before changing external systems, confirm:
+## Do not use this skill when
 
-1. Deployment mode: preview, client demo, staging, or production.
-2. GitHub owner and repository name.
-3. Repository visibility.
-4. Default branch and release commit.
-5. Vercel team and project.
-6. Target domain or subdomain.
-7. DNS provider and who controls it.
-8. Required environment variables and their scopes.
-9. Database, CMS, email, analytics, payment, and storage dependencies.
-10. Whether search engines may index this environment.
-11. Audit report and release verdict.
-12. Rollback owner and approval contact.
+- Do not deploy unaudited or uncommitted changes.
+- Do not modify unrelated DNS records.
+- Do not claim success from provider build status alone.
 
-Do not deploy when the intended repository, Vercel project, domain, or production authority is ambiguous.
+## Ownership
 
-## 2. Deployment modes
+This skill owns deployment and live verification. Audit owns release evidence; Build owns source corrections.
 
-### Preview
+## Required inputs
 
-- Use an immutable preview tied to a branch or commit.
-- Use test services and non-production data.
-- Keep secrets scoped to preview.
-- Disable indexing.
-- Share only with intended reviewers.
+- Explicit environment and deployment authority.
+- Exact local and remote commit SHA.
+- Passing release audit and known risks.
+- Provider project, domain, DNS, environment variables, integrations, and rollback target.
 
-### Client demo
+## Inputs to inspect first
 
-- Prefer a clear subdomain such as `demo.clientdomain.com` or an approved Tangison demo domain.
-- Only the home hero and approved brand page are unlocked by default.
-- All other routes use the designed locked-demo state.
-- Disable or safely simulate payments, email sends, database writes, and other irreversible actions.
-- Add `noindex, nofollow` and exclude the demo from production sitemaps.
-- Display a discreet demo status notice.
+1. Read the complete current request.
+2. Read approved project files and authentic source assets.
+3. Read repository instructions and inspect the current state when code or files are involved.
+4. Read **BUILD_PLAN.md** and **PROOF.md** when present.
+5. Inspect available capabilities before declaring a tool or check unavailable.
 
-### Staging
+## Assumptions and authority gates
 
-- Mirror production configuration without using live customer data unless explicitly approved.
-- Protect access when the content is confidential.
-- Use production-like integrations in sandbox mode.
-- Keep indexing disabled.
+- Stop if local and remote SHA differ, release audit failed, ownership is ambiguous, or production credentials are unavailable.
+- Ask before irreversible domain, database, or traffic changes.
+- Record every material assumption. Never present an assumption as a verified fact.
+- Ask one concise question only when the answer materially changes scope, ownership, legal meaning, cost, public release, production state, or an irreversible action.
+- Never expose credentials or place them in source, URLs, logs, evidence, or handoff files.
 
-### Production
+## Required tools and fallbacks
 
-- Deploy the exact audited commit.
-- Use production-scoped secrets and integrations.
-- Enable indexing only after canonical URLs, redirects, sitemap, robots policy, analytics, and consent behaviour are confirmed.
-- Obtain explicit approval before domain cutover or other externally visible changes.
+- Use configured deployment connectors or authenticated CLI.
+- Use DNS, TLS, HTTP, browser, form, integration, and live-audit checks.
+- Keep credentials process-scoped and out of logs and files.
+- When a required capability is unavailable, use the nearest safe supported method and record the missing verification.
+- Never invent a tool result, browser result, build result, deployment result, or remote state.
 
-## 3. Repository preparation
+## Procedure
 
-- Confirm the working tree and intended changes.
-- Review for generated files, local secrets, credentials, private client data, and oversized assets.
-- Verify `.gitignore`.
-- Run secret scanning before the first push.
-- Confirm license and public-readiness before making a repository public.
-- Commit intentionally with a clear message.
-- Push the audited branch or commit to GitHub.
-- Record the repository URL, commit SHA, and branch.
+1. Confirm environment and authority.
+2. Verify clean intended state and matching local and remote SHA.
+3. Verify release audit covers that SHA.
+4. Capture current production and rollback state.
+5. Deploy the exact commit.
+6. Verify build output and deployment revision.
+7. Verify TLS, canonical host, redirects, indexing, assets, forms, integrations, error routes, and responsive behaviour.
+8. Run a live audit.
+9. If critical verification fails, roll back or stop traffic change according to the approved plan.
+10. Record URLs, SHAs, checks, and rollback evidence.
 
-Never place a personal access token in a command, remote URL, file, commit, log, or chat response. Use an authenticated connector, credential manager, or hidden prompt. Rotate any credential exposed in chat immediately after the authorised task.
+## Verification
 
-## 4. Vercel project setup
+- Provider revision matches the audited commit.
+- TLS and redirects are correct.
+- Indexing matches environment intent.
+- Forms and integrations perform real expected actions safely.
+- Live audit passes release criteria.
+- Rollback is documented and available.
+- Run verification after the latest material change.
+- Separate action, observed result, evidence, interpretation, and remaining risk.
 
-- Link or create the correct Vercel project under the approved team.
-- Confirm framework detection, root directory, install command, build command, output directory, and runtime versions.
-- Pin versions where reproducibility requires it.
-- Add environment variables to the minimum necessary scopes: development, preview, or production.
-- Mark secrets as sensitive and never echo their values.
-- Configure functions, regions, cron jobs, redirects, rewrites, headers, and image settings only when the project needs them.
-- Deploy and record the deployment ID and immutable URL.
+## Proof requirements
 
-Do not reuse an unrelated Vercel project merely because it already exists.
+Maintain **PROOF.md** for material work using:
 
-## 5. Data and integration safety
+Phase | Action | Target | Command or method | Result | Evidence path or URL | Timestamp | Status
 
-- Back up production data before a risky migration.
-- Review database migrations and identify whether they are backward compatible.
-- Run destructive migrations only with explicit approval and a recovery plan.
-- Use test keys for demo and preview environments.
-- Verify email destinations, webhook targets, storage buckets, analytics properties, and payment modes.
-- Apply least privilege to every token and service account.
+Use only these working statuses: planned, running, passed, failed, blocked, paused, superseded.
 
-## 6. Domain and DNS connection
+The following are not proof: a file merely existing, a claim that work should function, a check run before the latest change, a local commit without remote verification, or a different test replacing the failed test.
 
-1. Add the exact approved domain to the correct Vercel project.
-2. Read the current DNS records before changing them.
-3. Use the exact record values Vercel currently supplies.
-4. Preserve unrelated MX, TXT, SPF, DKIM, DMARC, verification, and service records.
-5. Change only the validated host record.
-6. Avoid broad wildcard changes unless the user explicitly approves them.
-7. Wait for propagation using short, non-blocking checks.
-8. Verify TLS, preferred host, redirects, and canonical URLs.
+## Failure and debugging procedure
 
-Never hardcode assumed DNS targets. Vercel’s required records can change.
+1. Reproduce the failure with the same input and command or method.
+2. Preserve the failing output and evidence path.
+3. Identify the root cause. Do not replace diagnosis with a guess.
+4. Apply the smallest complete correction within the authorised scope.
+5. Rerun the exact failed check, then run the relevant regression checks.
+6. Record the failure, correction, new result, and remaining risk in `PROOF.md`.
 
-## 7. Live verification
+## Completion gate
 
-Test both the immutable Vercel URL and the custom domain:
+Do not claim completion until:
 
-- correct commit and environment;
-- HTTP 200 responses on unlocked routes;
-- intended status and presentation on locked routes;
-- 404 and error handling;
-- HTTPS and certificate validity;
-- redirect policy for `www`, apex, and alternate hosts;
-- navigation and critical journeys;
-- the `/brand` page matches `BRAND.md` and is available in the intended environment;
-- forms and real delivery destinations;
-- authentication and authorisation;
-- images, fonts, scripts, and downloads;
-- metadata, canonical URLs, social cards, robots policy, and sitemap;
-- analytics and consent behaviour;
-- the visible `Made by Tangison Studio` footer credit links correctly to `https://studio.tangison.com` on every public page;
-- mobile layout and browser console;
-- no exposed secrets or source maps containing private data.
+- every approved output exists and matches the locked scope;
+- the latest applicable checks pass;
+- **PROOF.md** contains real evidence;
+- unauthorised or unrelated work is absent;
+- remaining risk and blocked checks are disclosed.
 
-Run a focused live audit after deployment. A local pass does not prove the deployed site is healthy.
+## Handoff
 
-## 8. Rollback
-
-Before production cutover, record:
-
-- previous healthy deployment;
-- previous DNS state;
-- database backup or migration reversal plan;
-- the person authorised to approve rollback;
-- the trigger conditions for rollback.
-
-If the live site has a P0 issue, restore the last healthy deployment first, then diagnose. Do not keep a broken production release live while attempting a long repair.
-
-## 9. Handoff report
-
-Provide:
-
-- deployment mode and release verdict;
-- repository, branch, and commit;
-- Vercel project, deployment ID, and URLs;
-- custom domain and DNS changes;
-- environment variable names and scopes, never values;
-- integrations and operating modes;
-- live verification results;
-- indexing status;
-- known limitations and accepted risks;
-- rollback reference;
-- recommended monitoring and next audit date.
-
-After finishing any task that used an exposed temporary credential, tell the user clearly to rotate it now.
-
-Every deployment claim must include proof, such as the commit SHA, deployment ID, immutable URL, DNS lookup, HTTP result, screenshot, or live audit output. A dashboard status alone is insufficient.
+Return environment, live URL, deployed SHA, verification evidence, rollback target, incidents, and remaining monitoring actions.

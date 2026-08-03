@@ -1,48 +1,39 @@
-# Webman by Tangison Studio
+# Tangison Universal Skills V2
 
-An evidence-led website and document production system for strategy, content, brand definition, creation, auditing, deployment, and premium document production.
+Tangison Universal Skills V2 is a proof-first, cross-harness library for Tangison Studio. It contains 25 canonical skills for websites, brands, social design, imagery, documents, business planning, financial models, funding applications, research, completeness, and project handoff.
 
-Webman uses portable Agent Skills and is designed for Codex, Claude Code, Kimi Code, Antigravity, Gemini CLI, Cursor, Windsurf, ZCode, Zed, OpenCode, and other compatible harnesses. It discovers available tools, installs verified project-scoped skills, defaults to autonomous full builds, uses planning only when requested or blocking, and requires proof for every completion claim.
+Webman is canonical. The legacy SkillsCamp website is excluded and unchanged.
 
-## Install
+## Start in under two minutes
 
-Install the complete collection:
+1. Read SYSTEM.md.
+2. Read skills/tangison-studio-router/SKILL.md.
+3. Select exactly one owner from ROUTING_MATRIX.md.
+4. Read the owner skill and only required supporting skills.
+5. Maintain PROOF.md. A completion claim without evidence is invalid.
 
-```bash
-npx skills add https://github.com/tangison/webman
-```
+## Use modes
 
-Or select an individual skill when prompted.
+- Agent Skills harness: point the harness at this repository and confirm it discovers skills/*/SKILL.md. Installation commands vary by current harness and must be verified before use.
+- Repository reading: tell the agent to read SYSTEM.md and the selected SKILL.md directly.
+- Copy and paste: use prompt-packs/copy-paste-no-install.md, then paste the selected complete skill.
+- ZCode and GLM: start with prompt-packs/glm-zcode.md. It uses explicit files, headings, counts, and proof gates.
+- Codex, Claude Code, Cursor, Windsurf, and other harnesses: use the matching prompt pack and inspect real capabilities first.
 
-## Included skills
+## Validate
 
-| Skill | Purpose |
-|---|---|
-| `tangison-web-loop` | Routes a project through the complete workflow |
-| `tangison-web-plan` | Discovery, research, architecture, scope, and acceptance criteria |
-| `tangison-web-content` | Research, editorial planning, exact website copy, metadata, and content QA |
-| `tangison-web-create` | Complete website implementation, including forgotten routes and UI states |
-| `tangison-web-audit` | Evidence-based code, design, accessibility, SEO, performance, and security audit |
-| `tangison-web-deploy` | GitHub, Vercel, demo subdomain, production domain, verification, and rollback |
-| `tangison-documents` | Premium transactional and business PDFs |
-| `tangison-magazine` | Editorial profiles, reports, brochures, and page-image documents |
+Run:
 
-## Workflow
+~~~sh
+node scripts/validate.mjs
+~~~
 
-```text
-Inspect and bootstrap
-Plan only when requested or blocking
-Content
-Brand definition
-Create
-Audit
-Fix and re-audit
-Deploy when requested
-Live audit
-```
+The validation suite checks skill structure, names, manifests, duplicates, links, prompt packs, routing scenarios, placeholder shortcuts, obsolete references, and credential signatures.
 
-Demo mode is never assumed. It activates only when the user explicitly requests a demo. The specialist skills can also be invoked independently.
+## Contribute
 
-## Start a complete project
+Read CONTRIBUTING.md and SOURCES.md. New skills require verified source and licence status, unique ownership, GLM-readable procedures, scenario coverage, manifest updates, and proof.
 
-Copy the master invocation from [`SUPER_PROMPT.md`](SUPER_PROMPT.md). It connects Webman with Superpowers, Ponytail, Hallmark, Impeccable, Taste, full-output enforcement, Anime.js, GSAP ScrollTrigger, marketing, auditing, GitHub, and Vercel while keeping one proof ledger.
+## Handoff
+
+The ZIP is a starter-only source handoff. Another authenticated agent may create a branch, rerun validation, commit, push, verify the remote SHA, and open a pull request. Do not claim remote publication from this archive.

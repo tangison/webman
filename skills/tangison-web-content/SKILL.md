@@ -1,86 +1,114 @@
 ---
 name: tangison-web-content
-description: Autonomously research, structure, write, rewrite, verify, and organise human-sounding website content for full builds, redesigns, explicit client demos, stores, portals, landing pages, blogs, case studies, and SEO pages. Use the user's brief, existing project, verified sources, and available Webman files to create exact production copy, metadata, interface states, calls to action, image direction, and a page-by-page content system without forcing a separate planning phase.
+description: Own source-backed website content strategy, information architecture, page hierarchy, and section-level content planning. Use before final copywriting or implementation when website facts and page structure must be established.
 ---
 
 # Tangison Web Content
 
-Create exact website content for one specific organisation. Do not design the interface, implement code, deploy, or invent business information.
+## Purpose
 
-## Universal operating foundation
+Create an approved content system that tells copywriting what must be said and build what must be rendered.
 
-This skill is harness-neutral. Use available files, connectors, web search, browser inspection, OCR, spreadsheets, and source documents when they provide stronger evidence than memory. Prefer primary sources. Keep a source trail and never claim a fact is verified without proof.
+**A completion claim without evidence is invalid.**
 
-Iterate through `collect, verify, structure, draft, remove generic language, fit the interface, fact-check, review, revise`. Re-run content checks after implementation changes. Stop after three cycles without improvement, ten cycles total, or when approval, legal meaning, or a missing fact requires the user.
+## Use this skill when
 
-## Interview
+- A new or revised website needs page structure.
+- Existing content is incomplete, duplicated, generic, or unsupported.
+- Facts must be mapped to routes and sections.
 
-Inspect pages, audience, conversion, voice, official business facts, services, prices, contacts, locations, hours, policies, team, credentials, proof, existing content, SEO goals, target markets, and prohibited claims. Reuse everything already answered. Ask one concise question only when a missing fact materially changes published meaning or creates legal, financial, brand, or operational risk. Otherwise mark the gap and continue without filler.
+## Do not use this skill when
 
-## Sources and facts
+- Do not own final persuasive wording.
+- Do not invent testimonials, metrics, services, clients, or claims.
+- Do not choose UI widgets or motion.
 
-Prioritize user instructions, `PRODUCT.md`, `BUILD_PLAN.md`, supplied documents, official website, approved profiles, government or regulatory sources, and authoritative industry sources. Competitors inform positioning, never reusable copy.
+## Ownership
 
-Maintain a fact ledger with value, status, source, intended page, and approval requirement. Classify facts as verified, user supplied, inferred, recommended, missing, or rejected. Never publish inference as fact.
+This skill owns website content structure and fact placement. Copywriting owns final wording.
 
-## Message system
+## Required inputs
 
-Define core positioning, primary promise, proof, objections, primary CTA, secondary CTA, and voice traits. Every page and section must answer a user question or advance a real decision.
+- Research fact ledger and approved business facts.
+- Website plan, route list, audience, and primary action.
+- Approved brand voice and existing copy.
+- Legal, operational, and client-verification items.
 
-Reject vague CTAs when a specific action is possible.
+## Inputs to inspect first
 
-When the project needs deeper positioning, customer research, CRO, launch, content strategy, pricing, or channel planning, invoke the appropriate specialist from `https://github.com/coreyhaines31/marketingskills` after its product-marketing context is established. Verify every imported claim against Webman’s fact ledger.
+1. Read the complete current request.
+2. Read approved project files and authentic source assets.
+3. Read repository instructions and inspect the current state when code or files are involved.
+4. Read **BUILD_PLAN.md** and **PROOF.md** when present.
+5. Inspect available capabilities before declaring a tool or check unavailable.
 
-## Page ledger
+## Assumptions and authority gates
 
-For every route document purpose, audience, search intent, main message, CTA, proof, sections, sources, missing facts, image requirements, metadata, copy limits, and approval status.
+- Stop when a material claim lacks evidence or the user must approve legal or operational wording.
+- Mark missing copy rather than filling it with generic text.
+- Record every material assumption. Never present an assumption as a verified fact.
+- Ask one concise question only when the answer materially changes scope, ownership, legal meaning, cost, public release, production state, or an irreversible action.
+- Never expose credentials or place them in source, URLs, logs, evidence, or handoff files.
 
-For every section document purpose, user question, exact message, proof, preferred format, maximum copy, CTA, and visual need.
+## Required tools and fallbacks
 
-Do not default every idea to a card grid.
+- Read supplied documents and current pages before proposing structure.
+- Use research for unstable or unsupported facts.
+- Maintain `CONTENT_PLAN.md` as the source of truth.
+- When a required capability is unavailable, use the nearest safe supported method and record the missing verification.
+- Never invent a tool result, browser result, build result, deployment result, or remote state.
 
-The `/brand` page is mandatory. Write its exact approved public copy from `BRAND.md`, including identity idea, logo story when verified, colour meaning, typography character, imagery direction, voice, and selected applications. Do not expose confidential strategy, font files, working assets, or internal misuse examples unless approved.
+## Procedure
 
-## Writing rules
+1. List every route and its user job.
+2. Create a fact ledger per route.
+3. Define message hierarchy and section order.
+4. Assign each fact to one best location.
+5. Define required CTAs, forms, metadata, proof points, and trust content.
+6. Remove duplicate or unsupported claims.
+7. Mark exact client-verification items.
+8. Write production-ready content requirements in `CONTENT_PLAN.md`.
+9. Hand the structure and fact boundaries to copywriting.
 
-- Use concrete nouns and active verbs.
-- Preserve exact names, prices, contacts, URLs, dates, and registrations.
-- Use natural Namibian business English where relevant.
-- Avoid em dashes.
-- Avoid repeated sentence shapes, three-item formulas, filler headings, fake urgency, generic claims, and template testimonials.
-- Reject revolutionise, unlock, cutting-edge, next-generation, seamless, game-changing, world-class, industry-leading, unparalleled, one-stop shop, and unwavering commitment unless factually necessary.
-- Never fabricate metrics, awards, partners, clients, testimonials, credentials, rankings, guarantees, or results.
+## Verification
 
-## Interface copy
+- Every approved route has a complete section ledger.
+- Every material claim is verified or labelled.
+- Primary and secondary actions are consistent.
+- No invented social proof remains.
+- Copywriting can produce final wording without guessing structure.
+- Run verification after the latest material change.
+- Separate action, observed result, evidence, interpretation, and remaining risk.
 
-Write labels, helper text, required indicators, validation, errors, loading messages, empty states, success messages, confirmation, privacy notes, consent, search states, locked-demo messages, 404 copy, 500 copy, offline copy, maintenance copy, and access-denied copy.
+## Proof requirements
 
-Include the exact footer credit `Made by Tangison Studio`, linked to `https://studio.tangison.com`, unless the user explicitly removes or changes it for the project.
+Maintain **PROOF.md** for material work using:
 
-Errors must state what happened, what the user can do, and whether their information was preserved.
+Phase | Action | Target | Command or method | Result | Evidence path or URL | Timestamp | Status
 
-## SEO content
+Use only these working statuses: planned, running, passed, failed, blocked, paused, superseded.
 
-For each public page define intent, topic, supporting terms, questions, title, description, H1, H2 direction, internal links, schema opportunity, imagery, local context, and CTA. Do not use keyword density or arbitrary word count as a writing target. Do not generate near-duplicate location pages without real local value.
+The following are not proof: a file merely existing, a claim that work should function, a check run before the latest change, a local commit without remote verification, or a different test replacing the failed test.
 
-## Copy budgets
+## Failure and debugging procedure
 
-Keep navigation to 1 to 3 words, hero headlines to roughly 4 to 12 words, hero support to 20 to 55 words, CTAs to 2 to 5 words, section introductions to 25 to 80 words, service summaries to 20 to 60 words, FAQs to 40 to 140 words, titles to roughly 45 to 60 characters, and descriptions to roughly 130 to 160 characters. These are design guides, not forced limits.
+1. Reproduce the failure with the same input and command or method.
+2. Preserve the failing output and evidence path.
+3. Identify the root cause. Do not replace diagnosis with a guess.
+4. Apply the smallest complete correction within the authorised scope.
+5. Rerun the exact failed check, then run the relevant regression checks.
+6. Record the failure, correction, new result, and remaining risk in `PROOF.md`.
 
-## Images and alt text
+## Completion gate
 
-For every image define purpose, subject, source, orientation, crop, alt text, caption, credit, authenticity, generation permission, and approval. Prefer real client photography. Do not regenerate official marks or fabricate branded evidence. Generated imagery must not be presented as documentary proof.
+Do not claim completion until:
 
-Alt text must communicate purpose, remain factual, avoid keyword stuffing, and use empty alt text for decorative images.
+- every approved output exists and matches the locked scope;
+- the latest applicable checks pass;
+- **PROOF.md** contains real evidence;
+- unauthorised or unrelated work is absent;
+- remaining risk and blocked checks are disclosed.
 
-## Production files
+## Handoff
 
-Create `CONTENT_PLAN.md` with objective, audience, voice, message hierarchy, fact ledger, sources, competitors, search map, route plan, media plan, missing information, statuses, links, metadata, and risks.
-
-Create page files only for real routes. Each contains route, audience, status, CTA, intent, metadata, hero, sections, final CTA, image direction, alt text, sources, and facts needing confirmation.
-
-Statuses are BLOCKED, DRAFT, FACT CHECK, CLIENT REVIEW, APPROVED, IMPLEMENTED, and CHANGED IN BUILD.
-
-Content is ready when required routes are covered, facts are verified or marked, AI filler and em dashes are removed, metadata is unique, CTAs describe real actions, images are planned, copy fits the intended interface, and approval status is explicit.
-
-Hand approved copy to `tangison-web-create`, audit targets to `tangison-web-audit`, and canonical and indexing requirements to `tangison-web-deploy`.
+Return route ledger, message hierarchy, fact constraints, CTA map, metadata requirements, and items awaiting approval.

@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "router": "tangison-studio-router",
+  "routes": {
+    "harness_capability": "tangison-harness-adapter",
+    "skill_authoring": "tangison-skill-author",
+    "completeness": "tangison-full-output-enforcement",
+    "anti_slop": "tangison-anti-ai-slop",
+    "facts": "tangison-research",
+    "project_handoff": "tangison-project-launchpad",
+    "web_orchestration": "tangison-web-loop",
+    "web_scope": "tangison-web-plan",
+    "web_content": "tangison-web-content",
+    "final_web_copy": "tangison-copywriting-master",
+    "widget_choice": "tangison-widget-master",
+    "motion": "tangison-motion-master",
+    "web_implementation": "tangison-web-build",
+    "web_audit": "tangison-web-audit",
+    "web_deployment": "tangison-web-deploy",
+    "identity": "tangison-brand-identity",
+    "social_layout": "tangison-social-design",
+    "raster_imagery": "tangison-imagegen",
+    "vector_graphics": "tangison-vectorgraphics",
+    "formal_documents": "tangison-documents",
+    "editorial_documents": "tangison-magazine",
+    "business_plan": "tangison-business-plan",
+    "financial_model": "tangison-financial-model",
+    "funding_packaging": "tangison-funding-application"
+  }
+}

@@ -31,7 +31,7 @@ Use only the current harness and project scope by default. Do not add `--global`
 - Source: `https://github.com/tangison/webman`
 - Install: `npx skills add tangison/webman`
 - Purpose: Tangison planning, content, brand definition, creation, audit, deployment, and document workflows.
-- Proof: eight valid skills are visible in the intended harness and one routing test succeeds.
+- Proof: all 25 valid canonical skills are visible in the intended harness and the routing scenarios succeed.
 
 ### Superpowers
 
