@@ -28,8 +28,8 @@ Webman remains the canonical portable skills repository. SkillsCamp is excluded 
 | Documentation | tangison-project-launchpad | required files substantive and internally linked | built |
 | Repository validation | tangison-skill-author | all local validators pass | passed |
 | ZIP handoff | tangison-project-launchpad | inventory, extraction, checksum, and secret scan pass | passed |
-| GitHub handoff | tangison-project-launchpad | branch derives from remote main; push succeeds; local and remote SHAs match | in progress |
-| Draft pull request | tangison-project-launchpad | draft PR targets main from v2/universal-skills | pending |
+| GitHub handoff | tangison-project-launchpad | branch derives from remote main; push succeeds; local and remote SHAs match | passed |
+| Draft pull request | tangison-project-launchpad | draft PR targets main from v2/universal-skills | passed |
 
 ## Rejected alternatives
 

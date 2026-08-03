@@ -17,7 +17,7 @@
 | Canonical count is 25 | approved V2 architecture and current package inventory | BUILD_PLAN.md and manifests/skills.json |
 | GLM and ZCode are highest-priority consumers | user supplied | authoritative work specification |
 | SkillsCamp is excluded from current implementation | explicit later user instruction | MIGRATION_AUDIT.md |
-| GitHub branch publication is explicitly authorised and in progress | user supplied; not yet complete | BUILD_PLAN.md and PROOF.md |
+| GitHub branch is published and draft PR 1 targets main | remotely verified | PROOF.md and https://github.com/tangison/webman/pull/1 |
 
 ## Documentation requirements
 
