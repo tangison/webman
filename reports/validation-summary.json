@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-08-03T06:06:14.702Z",
+  "status": "passed",
+  "results": [
+    {
+      "script": "validate-skills.mjs",
+      "status": "passed",
+      "output": "PASS: 25 skills have unique names, valid frontmatter, V2 sections, proof gates, authority gates, and no banned placeholders."
+    },
+    {
+      "script": "detect-duplicates.mjs",
+      "status": "passed",
+      "output": "PASS: 25 canonical skill bodies are unique."
+    },
+    {
+      "script": "build-manifest.mjs",
+      "status": "passed",
+      "output": "PASS: manifest matches 25 skills."
+    },
+    {
+      "script": "validate-links.mjs",
+      "status": "passed",
+      "output": "PASS: 65 Markdown files have valid internal links and required root files exist."
+    },
+    {
+      "script": "verify-prompt-packs.mjs",
+      "status": "passed",
+      "output": "PASS: 7 prompt packs are substantive, proof-driven, and reference only canonical skills."
+    },
+    {
+      "script": "validate-scenarios.mjs",
+      "status": "passed",
+      "output": "PASS: 20 deterministic routing scenarios have one canonical owner, valid supporters, authority gates, proof, and completion definitions."
+    }
+  ]
+}

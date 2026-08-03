@@ -1,3 +1,13 @@
-.tangison-private/
-**/banking.private.md
-**/*.secret.md
+.DS_Store
+Thumbs.db
+node_modules/
+.env
+.env.*
+!.env.example
+coverage/
+dist/
+.cache/
+*.log
+*.zip
+*.bundle
+reports/archive-*.txt

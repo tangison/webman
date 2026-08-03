@@ -1,245 +1,116 @@
 ---
 name: tangison-web-audit
-description: Audit a website or web codebase with real tools, evidence, severity, root-cause analysis, safe fixes, and repeated verification. Use before a Tangison demo or production release, after major changes, or when accessibility, performance, SEO, security, responsive behaviour, content quality, and anti-template design must be checked honestly.
+description: Independently audit website code and live output with evidence. Use for baseline, release, regression, or audit-and-fix work covering functionality, accessibility, performance, responsive behaviour, SEO, security, content, assets, integrations, and deployment state.
 ---
 
 # Tangison Web Audit
 
-Audit, classify, fix when authorised, verify, and audit again. Never replace measurements with intuition. Never silently skip a failed tool.
+## Purpose
 
-## Universal operating foundation
+Produce reproducible findings against the exact audited state without silently editing when only an audit was authorised.
 
-This skill is harness-neutral. Discover available shell, browser, connector, MCP, screenshot, and reporting tools. Use multiple independent tools where their coverage differs. A tool invocation is complete only when its output, target, version, and status are recorded in `PROOF.md`.
+**A completion claim without evidence is invalid.**
 
-Iterate through `baseline, scan, classify, trace root causes, prioritise, fix when authorised, validate, re-scan, compare`. Re-run the same detector after each fix. Continue until the release gate passes, three cycles produce no measurable improvement, ten cycles run, or a human judgement blocks progress.
+## Use this skill when
 
-## 1. Confirm scope
+- A website needs a baseline or release gate.
+- A regression must be verified.
+- A live deployment needs evidence.
+- The user explicitly authorises audit and fix.
 
-Ask one concise question at a time until these are known:
+## Do not use this skill when
 
-- target: local codebase, preview URL, production URL, or all three;
-- mode: report only, audit and fix, release gate, or regression check;
-- build mode: demo or full;
-- framework and package manager;
-- authenticated routes and test credentials, if applicable;
-- business-critical journeys;
-- target browsers, devices, regions, and languages;
-- analytics or Search Console access available;
-- user-approved tools that upload URLs or data to third parties.
+- Do not edit in audit-only mode.
+- Do not replace a failed test with a different passing test.
+- Do not call a local build a live audit.
 
-Default to report only when the user asks for an isolated audit without asking for fixes. When invoked inside an authorised full build, redesign, repair, or release workflow, use audit-and-fix mode for in-scope repository changes.
+## Ownership
 
-## 2. Establish the baseline
+This skill owns independent evidence and findings. Build owns authorised corrections. Deploy owns release actions.
 
-Record the commit, branch, environment, URL, timestamp, tool versions, build mode, and relevant configuration. Run the project’s own install, type-check, lint, test, and production-build commands first.
+## Required inputs
 
-If no test suite exists, report `No test suite present`. Do not convert that into a pass.
+- Audit mode and exact authority.
+- Repository SHA or working state and target URLs.
+- Approved scope, content, assets, browsers, viewports, and integrations.
+- Prior failures and expected regression checks.
 
-## 3. Run applicable checks
+## Inputs to inspect first
 
-Use installed real tools. Install verified project-scoped audit skills automatically when the harness permits safe, reversible installation. Ask only when installation is global, privileged, destructive, licence-sensitive, uncertain, or blocked by the harness. Report every remaining gap.
+1. Read the complete current request.
+2. Read approved project files and authentic source assets.
+3. Read repository instructions and inspect the current state when code or files are involved.
+4. Read **BUILD_PLAN.md** and **PROOF.md** when present.
+5. Inspect available capabilities before declaring a tool or check unavailable.
 
-### Independent audit stack
+## Assumptions and authority gates
 
-Run a layered stack rather than trusting one score:
+- Stop before edits unless audit-and-fix authority is explicit.
+- Stop before destructive testing, production data changes, or credential use not already configured.
+- Record every material assumption. Never present an assumption as a verified fact.
+- Ask one concise question only when the answer materially changes scope, ownership, legal meaning, cost, public release, production state, or an irreversible action.
+- Never expose credentials or place them in source, URLs, logs, evidence, or handoff files.
 
-1. Project checks: type checker, linter, tests, production build, dependency graph, and console.
-2. Browser journeys: Playwright or an equivalent browser tool plus manual keyboard and responsive inspection.
-3. Accessibility: axe-core, Pa11y, and manual checks.
-4. Performance: Lighthouse plus framework or browser profiling where needed.
-5. Crawl and SEO: Squirrelscan, Lighthouse SEO, direct HTML inspection, sitemap and robots validation, and SEOJuice methods when the required data exists.
-6. Security: Gitleaks, ecosystem dependency audit, optional TruffleHog verification, header checks, and OWASP ZAP only when authorised and safe for the target.
-7. Design quality: mandatory Hallmark structural audit plus Impeccable audit and critique.
-8. Simplicity: Ponytail audit or an equivalent repo-wide complexity pass.
-9. Content: exact comparison to approved sources, marketing context, and legal or policy inputs.
-10. Motion and scroll: purpose, implementation, reduced-motion behaviour, cleanup, performance, interruption, keyboard use, and mobile behaviour.
-11. Media: delivery formats, responsive sources, dimensions, aspect ratio, crop quality, LCP priority, lazy loading, duplicates, and broken assets.
+## Required tools and fallbacks
 
-Primary sources:
+- Use applicable lint, type, test, build, browser, Lighthouse, axe, Pa11y, link, header, secret, and live-request checks.
+- Record unavailable tools instead of inventing results.
+- Capture route and viewport with visual evidence.
+- When a required capability is unavailable, use the nearest safe supported method and record the missing verification.
+- Never invent a tool result, browser result, build result, deployment result, or remote state.
 
-- `https://github.com/squirrelscan/skills`
-- `https://github.com/calm-north/seojuice-skills`
-- `https://github.com/pbakaus/impeccable`
-- `https://github.com/nutlope/hallmark`
-- `https://github.com/freshtechbro/claudedesignskills`
-- `https://github.com/dietrichgebert/ponytail`
-- `https://github.com/GoogleChrome/lighthouse`
-- `https://github.com/dequelabs/axe-core`
-- `https://github.com/pa11y/pa11y`
-- `https://github.com/microsoft/playwright`
-- `https://github.com/gitleaks/gitleaks`
-- `https://github.com/trufflesecurity/trufflehog`
-- `https://github.com/zaproxy/zaproxy`
+## Procedure
 
-If two tools disagree, inspect the raw evidence and explain the difference. Never choose the more flattering result.
+1. Lock audit mode and exact target state.
+2. Record SHA, URL, viewport, browser, and timestamp.
+3. Run repository integrity and secret checks.
+4. Run functional, responsive, accessibility, performance, SEO, security-header, content, asset, form, and integration checks that apply.
+5. Preserve raw failures.
+6. Classify severity, evidence, reproduction, root cause hypothesis, and owner.
+7. In audit-and-fix mode, route corrections to Build and rerun the exact failed check.
+8. Run regression checks.
+9. Publish a factual audit summary and `PROOF.md` rows.
 
-### Functional and route integrity
+## Verification
 
-- Crawl every public route.
-- Verify the route and state matrix.
-- Test navigation, links, forms, authentication, redirects, downloads, search, filters, and critical journeys.
-- Verify loading, empty, no-results, error, offline, locked, maintenance, 404, and 500 states.
-- In demo mode, confirm only approved pages are unlocked and that locked content cannot be bypassed.
-- In full mode, treat locked or placeholder routes as release blockers.
+- Every finding has reproduction and evidence.
+- The exact audited state is identified.
+- Unavailable checks are disclosed.
+- Fixed findings pass the original check.
+- No unauthorised edit occurred.
+- Live claims use live evidence.
+- Run verification after the latest material change.
+- Separate action, observed result, evidence, interpretation, and remaining risk.
 
-### Accessibility
+## Proof requirements
 
-- Run axe-core against representative pages.
-- Run Pa11y as a complementary check when practical.
-- Manually verify keyboard navigation, focus order, focus visibility, landmarks, headings, form errors, dialogs, zoom, reduced motion, and screen-reader names.
-- Verify contrast and touch targets.
+Maintain **PROOF.md** for material work using:
 
-Do not auto-write fake alt text. Request a real description when meaning is unclear.
+Phase | Action | Target | Command or method | Result | Evidence path or URL | Timestamp | Status
 
-### Performance
+Use only these working statuses: planned, running, passed, failed, blocked, paused, superseded.
 
-- Run Lighthouse performance audits against stable builds.
-- Record LCP, CLS, INP or TBT where applicable, speed index, total blocking time, and transfer size.
-- Inspect oversized images, font loading, render-blocking assets, third-party scripts, hydration, re-renders, caching, and layout shifts.
-- Use framework bundle analysis when it applies.
+The following are not proof: a file merely existing, a claim that work should function, a check run before the latest change, a local commit without remote verification, or a different test replacing the failed test.
 
-### SEO and discoverability
+## Failure and debugging procedure
 
-- Run Lighthouse SEO.
-- Crawl titles, descriptions, headings, canonical URLs, status codes, redirects, internal links, alt text, and index directives.
-- Verify `robots.txt`, `sitemap.xml`, the human-readable sitemap when required, Open Graph data, social images, favicon, and structured data.
-- Validate JSON-LD against the visible page content.
-- Check that preview and demo sites are not accidentally indexable.
-- Use Search Console and analytics evidence when the user supplies access.
+1. Reproduce the failure with the same input and command or method.
+2. Preserve the failing output and evidence path.
+3. Identify the root cause. Do not replace diagnosis with a guess.
+4. Apply the smallest complete correction within the authorised scope.
+5. Rerun the exact failed check, then run the relevant regression checks.
+6. Record the failure, correction, new result, and remaining risk in `PROOF.md`.
 
-Do not manufacture keyword scores, backlink data, rankings, or traffic figures without a real source.
+## Completion gate
 
-### Security and privacy
+Do not claim completion until:
 
-- Run the ecosystem dependency audit.
-- Run Gitleaks for secrets.
-- Use TruffleHog as an optional second pass when approved.
-- Review headers, cookies, CORS, authentication, authorisation, input validation, rate limits, dependency exposure, source maps, environment leakage, and unsafe redirects.
-- Confirm test credentials, payment keys, and private data are not shipped to the client.
-- Verify analytics and cookies follow the approved consent policy.
-
-Never print or paste discovered secrets into the report. Redact them and name only the affected location.
-
-### Code quality and weight
-
-- Run the project type checker and linter.
-- Run `depcheck` or the ecosystem equivalent when suitable.
-- Scan for dead code, redundant wrappers, duplicate logic, unused flags, speculative abstractions, and dependencies replaced by native platform features.
-- Keep correctness, security, and accessibility findings separate from simplification findings.
-
-### Responsive design and theming
-
-- Inspect at 320, 375, 390, 768, 1024, 1280, and 1440 CSS pixels.
-- Check overflow, wrapping, tap targets, sticky elements, navigation, tables, media crops, text scaling, and orientation changes.
-- Check design tokens, hard-coded colours, theme switching, contrast in every theme, and system preference behaviour.
-
-### Content and visual integrity
-
-- Compare every page against approved content.
-- Compare implementation tokens, typography, logos, imagery, motion, components, and the public `/brand` page against `BRAND.md`.
-- Verify exact names, numbers, contact details, dates, prices, policies, and calls to action.
-- Flag generic AI copy, fabricated proof, em dashes, repeated sentence patterns, empty superlatives, and placeholder text.
-- Inspect for generic gradient heroes, repetitive card grids, excessive pills, glassmorphism without purpose, arbitrary icons, and template-like repetition.
-- Verify every public page includes a visible, accessible `Made by Tangison Studio` credit linked to `https://studio.tangison.com`, unless the user explicitly removed it for that project.
-- Run Hallmark as an independent structural anti-slop gate and retain its verdict. Run Impeccable for design-context, responsive, theming, accessibility, and polish findings. Keep subjective scores separate from measured technical results.
-
-### Motion and scroll
-
-- Identify the primary motion engine and flag unnecessary runtime duplication.
-- Confirm every animation serves hierarchy, continuity, feedback, or storytelling.
-- Test route transitions, section reveals, hover and focus feedback, timelines, staggers, pinned sections, parallax, and asynchronous-state motion where present.
-- Test normal and `prefers-reduced-motion: reduce` modes.
-- Check cleanup on unmount and route changes, resize behaviour, deep links, back and forward navigation, and repeated visits.
-- Profile forced reflow, layout shift, dropped frames, scroll-linked work, long tasks, battery-heavy loops, and oversized animation dependencies.
-- Fail development markers, purposeless infinite loops, animation that delays core content, scroll hijacking, inaccessible motion, or movement that makes the page harder to understand.
-
-### Media delivery
-
-- Inventory raster, vector, video, and font assets and trace their use.
-- Confirm suitable raster delivery assets use WebP or AVIF with a justified fallback where needed.
-- Keep SVG logos and icons vector-based.
-- Verify responsive widths, intrinsic dimensions, aspect ratio, crop, art direction, lazy loading, decode behaviour, LCP priority, compression quality, alt text, captions, and credits.
-- Flag source images delivered at excessive dimensions, duplicate exports, broken files, blurry conversions, missing transparency, and mobile crops that lose the subject.
-
-## 4. Optional broad crawler
-
-If Squirrelscan is installed and the target is public or its crawl is already authorised, run quick coverage first, surface coverage next, and full coverage before sign-off. Ask before sending a private, authenticated, staging, or access-controlled target to an external crawler. Treat its output as one evidence source, not the sole authority. Record the audit ID and use diff mode for regression checks.
-
-For a public release, prefer quick coverage for diagnosis, surface coverage after the first fix batch, and full coverage for final verification. If the full crawl is impossible, report the exact limitation and affected route patterns.
-
-## 5. Classify findings
-
-Use:
-
-- P0 Blocking: security exposure, data loss, unusable critical path, or release cannot proceed.
-- P1 Major: WCAG failure, broken conversion path, serious SEO block, severe performance issue, or misleading content.
-- P2 Minor: meaningful friction or maintainability cost with a workaround.
-- P3 Polish: limited user impact and safe to defer.
-
-Each finding must include:
-
-`Severity | Tool or method | Location | Evidence | User impact | Root cause | Recommended fix | Verification method`
-
-Do not report an unverified suspicion as a fact. Mark it `Needs confirmation`.
-
-## 6. Score honestly
-
-Report separate results for:
-
-- accessibility;
-- performance;
-- SEO;
-- security;
-- functional completion;
-- responsive behaviour;
-- content accuracy;
-- visual distinctiveness;
-- code simplicity.
-
-Use native tool scores where they exist. Do not average unrelated scores into a false scientific number. If an executive score is requested, explain its weighting and preserve the underlying results.
-
-## 7. Fix loop
-
-When authorised to fix:
-
-1. Fix P0 and P1 root causes first.
-2. Group related findings caused by the same component or configuration.
-3. Make the smallest complete correction.
-4. Run type-check, lint, tests, and build.
-5. Re-run the exact tool that found the issue.
-6. Record the before and after evidence.
-7. Continue until no P0 or P1 remains, no measurable improvement occurs after three cycles, or ten cycles have run.
-
-Ask the user when a fix needs copy, legal, brand, access, infrastructure, or product judgement. Never insert filler to make a tool green.
-
-## 8. Release gate
-
-A release may proceed only when:
-
-- no unresolved P0 exists;
-- every P1 is fixed or explicitly accepted by the user with a reason;
-- type-check, lint, tests, and production build pass;
-- critical journeys pass;
-- no secret is exposed;
-- demo locking or full access matches the agreed mode;
-- index directives match the environment;
-- the final audit records real evidence.
-
-## 9. Report
-
-Deliver:
-
-- environment and audit scope;
-- tool execution table with successes, failures, and omissions;
-- executive summary;
-- findings by severity;
-- systemic root causes;
-- positive practices worth preserving;
-- before and after deltas when fixes were made;
-- accepted risks and human decisions;
-- release verdict: pass, conditional pass, or fail;
-- exact next step for `tangison-web-deploy`.
-
-## Proof standard
-
-Every completed audit action must carry proof: the exact tool or manual method, target, timestamp, result, and retained output or screenshot path. A statement without evidence is a pending claim, not a completion.
+- every approved output exists and matches the locked scope;
+- the latest applicable checks pass;
+- **PROOF.md** contains real evidence;
+- unauthorised or unrelated work is absent;
+- remaining risk and blocked checks are disclosed.
+
+## Handoff
+
+Return audit mode, state identifier, passed checks, findings by severity, evidence paths, blocked checks, and release recommendation.

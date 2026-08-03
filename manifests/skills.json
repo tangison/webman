@@ -1,0 +1,307 @@
+{
+  "schema_version": 2,
+  "canonical_repository": "https://github.com/tangison/webman",
+  "generated_from": "skills/*/SKILL.md",
+  "skills": [
+    {
+      "name": "tangison-anti-ai-slop",
+      "path": "skills/tangison-anti-ai-slop/SKILL.md",
+      "description": "Prevent generic, fabricated, interchangeable visual and editorial work. Use before visual production and again before handoff for websites, identities, flyers, social graphics, documents, magazines, imagery, dashboards, portfolios, and presentations.",
+      "source": "Tangison",
+      "license": "MIT",
+      "portability": [
+        "installed-agent-skill",
+        "repository-reading",
+        "copy-paste"
+      ]
+    },
+    {
+      "name": "tangison-brand-identity",
+      "path": "skills/tangison-brand-identity/SKILL.md",
+      "description": "Create or refine deterministic brand identity systems and final editable logos. Use for discovery, naming lock, wordmarks, symbols, monograms, geometry, typography, colour, variants, favicons, export systems, and brand-kit documentation.",
+      "source": "Tangison",
+      "license": "MIT",
+      "portability": [
+        "installed-agent-skill",
+        "repository-reading",
+        "copy-paste"
+      ]
+    },
+    {
+      "name": "tangison-business-plan",
+      "path": "skills/tangison-business-plan/SKILL.md",
+      "description": "Own evidence-led business-plan reasoning and content architecture. Use for complete plans, lender-ready narratives, strategy documents, operating models, market analysis, funding need, use of funds, risks, and supporting-document requirements.",
+      "source": "Tangison",
+      "license": "MIT",
+      "portability": [
+        "installed-agent-skill",
+        "repository-reading",
+        "copy-paste"
+      ]
+    },
+    {
+      "name": "tangison-copywriting-master",
+      "path": "skills/tangison-copywriting-master/SKILL.md",
+      "description": "Write final conversion-focused website wording grounded in approved facts and content structure. Use for headlines, subheadlines, body copy, calls to action, navigation labels, forms, metadata, and section copy after content strategy is established.",
+      "source": "Tangison",
+      "license": "MIT",
+      "portability": [
+        "installed-agent-skill",
+        "repository-reading",
+        "copy-paste"
+      ]
+    },
+    {
+      "name": "tangison-documents",
+      "path": "skills/tangison-documents/SKILL.md",
+      "description": "Create, edit, redesign, and verify formal business documents including quotations, invoices, proformas, letters, agreements, NDAs, statements of work, policies, reports, certificates, financial tables, and print-ready A4 deliverables.",
+      "source": "Tangison",
+      "license": "MIT",
+      "portability": [
+        "installed-agent-skill",
+        "repository-reading",
+        "copy-paste"
+      ]
+    },
+    {
+      "name": "tangison-financial-model",
+      "path": "skills/tangison-financial-model/SKILL.md",
+      "description": "Create auditable financial schedules, formulas, projections, and scenarios. Use for revenue, costs, capital expenditure, operating expenditure, payroll, loans, cash flow, income statements, balance-sheet logic, break-even, sensitivities, and use-of-funds tables.",
+      "source": "Tangison",
+      "license": "MIT",
+      "portability": [
+        "installed-agent-skill",
+        "repository-reading",
+        "copy-paste"
+      ]
+    },
+    {
+      "name": "tangison-full-output-enforcement",
+      "path": "skills/tangison-full-output-enforcement/SKILL.md",
+      "description": "Guarantee complete, unabridged output across code, websites, documents, content, and assets. Use whenever an approved deliverable could be shortened, skeletonised, deferred, replaced by examples, or claimed complete without comparison to `BUILD_PLAN.md` and `PROOF.md`.",
+      "source": "Tangison",
+      "license": "MIT",
+      "portability": [
+        "installed-agent-skill",
+        "repository-reading",
+        "copy-paste"
+      ]
+    },
+    {
+      "name": "tangison-funding-application",
+      "path": "skills/tangison-funding-application/SKILL.md",
+      "description": "Package verified business plans, financial models, and supporting documents for a named funding institution. Use for current requirement research, gap analysis, submission indexes, institutional forms, and lender-specific handoff without implying approval.",
+      "source": "Tangison",
+      "license": "MIT",
+      "portability": [
+        "installed-agent-skill",
+        "repository-reading",
+        "copy-paste"
+      ]
+    },
+    {
+      "name": "tangison-harness-adapter",
+      "path": "skills/tangison-harness-adapter/SKILL.md",
+      "description": "Adapt Tangison workflows to the capabilities of ZCode and GLM, Codex, Claude Code, Cursor, Windsurf, Kimi Code, Gemini CLI, OpenCode, generic shell harnesses, and chat-only environments. Use before relying on tools, installed skills, referenced files, connectors, or automatic context loading.",
+      "source": "Tangison",
+      "license": "MIT",
+      "portability": [
+        "installed-agent-skill",
+        "repository-reading",
+        "copy-paste"
+      ]
+    },
+    {
+      "name": "tangison-imagegen",
+      "path": "skills/tangison-imagegen/SKILL.md",
+      "description": "Create truthful supporting raster imagery including photographic scenes, product-style images, environments, textures, backgrounds, illustrations, web heroes, and editorial imagery. Use when authentic assets are unavailable and generated imagery is appropriate and clearly labelled.",
+      "source": "Tangison",
+      "license": "MIT",
+      "portability": [
+        "installed-agent-skill",
+        "repository-reading",
+        "copy-paste"
+      ]
+    },
+    {
+      "name": "tangison-magazine",
+      "path": "skills/tangison-magazine/SKILL.md",
+      "description": "Create editorial company profiles, annual reports, brand books, brochures, case studies, portfolios, lookbooks, impact reports, visual proposals, and magazine-style documents where visual storytelling and varied page composition matter.",
+      "source": "Tangison",
+      "license": "MIT",
+      "portability": [
+        "installed-agent-skill",
+        "repository-reading",
+        "copy-paste"
+      ]
+    },
+    {
+      "name": "tangison-motion-master",
+      "path": "skills/tangison-motion-master/SKILL.md",
+      "description": "Define purposeful interface motion, direction, timing, easing, and reduced-motion behaviour. Use for transitions, reveals, menus, drawers, page changes, sticky navigation, scroll effects, SVG sequences, and interaction feedback.",
+      "source": "Tangison",
+      "license": "MIT",
+      "portability": [
+        "installed-agent-skill",
+        "repository-reading",
+        "copy-paste"
+      ]
+    },
+    {
+      "name": "tangison-project-launchpad",
+      "path": "skills/tangison-project-launchpad/SKILL.md",
+      "description": "Prepare complete, reusable project starter packs and verified handoffs for websites, brands, documents, applications, automations, campaigns, and other client work. Use when another agent or human must continue from organised Markdown instructions and authentic source assets without relying on chat history.",
+      "source": "Tangison",
+      "license": "MIT",
+      "portability": [
+        "installed-agent-skill",
+        "repository-reading",
+        "copy-paste"
+      ]
+    },
+    {
+      "name": "tangison-research",
+      "path": "skills/tangison-research/SKILL.md",
+      "description": "Verify facts, dates, sources, conflicts, and inferences for Tangison projects. Use when current information, official requirements, competitor context, business claims, website content, funding criteria, or source attribution materially affects the deliverable.",
+      "source": "Tangison",
+      "license": "MIT",
+      "portability": [
+        "installed-agent-skill",
+        "repository-reading",
+        "copy-paste"
+      ]
+    },
+    {
+      "name": "tangison-skill-author",
+      "path": "skills/tangison-skill-author/SKILL.md",
+      "description": "Create, revise, audit, validate, and release Tangison skills. Use when adding a skill, changing a canonical `SKILL.md`, resolving duplicates, checking portability, updating manifests, or preparing a skill library for another harness.",
+      "source": "Tangison",
+      "license": "MIT",
+      "portability": [
+        "installed-agent-skill",
+        "repository-reading",
+        "copy-paste"
+      ]
+    },
+    {
+      "name": "tangison-social-design",
+      "path": "skills/tangison-social-design/SKILL.md",
+      "description": "Compose exact branded social posts, case-study announcements, flyers, posters, event graphics, coming-soon graphics, promotional graphics, and campaign visual systems. Use when final text, logos, imagery, and layout must be assembled at exact platform dimensions.",
+      "source": "Tangison",
+      "license": "MIT",
+      "portability": [
+        "installed-agent-skill",
+        "repository-reading",
+        "copy-paste"
+      ]
+    },
+    {
+      "name": "tangison-studio-router",
+      "path": "skills/tangison-studio-router/SKILL.md",
+      "description": "Route Tangison Studio work to exactly one owner skill and explicit supporting skills. Use at the start of multi-domain work, ambiguous requests, or any task where planning, content, design, implementation, audit, deployment, or handoff responsibilities could conflict.",
+      "source": "Tangison",
+      "license": "MIT",
+      "portability": [
+        "installed-agent-skill",
+        "repository-reading",
+        "copy-paste"
+      ]
+    },
+    {
+      "name": "tangison-vectorgraphics",
+      "path": "skills/tangison-vectorgraphics/SKILL.md",
+      "description": "Create true editable SVG icons, motifs, route lines, dividers, botanical line work, diagrams, flat graphic elements, and simple symbol systems. Use when the deliverable must remain path-based, scalable, inspectable, and deterministic.",
+      "source": "Tangison",
+      "license": "MIT",
+      "portability": [
+        "installed-agent-skill",
+        "repository-reading",
+        "copy-paste"
+      ]
+    },
+    {
+      "name": "tangison-web-audit",
+      "path": "skills/tangison-web-audit/SKILL.md",
+      "description": "Independently audit website code and live output with evidence. Use for baseline, release, regression, or audit-and-fix work covering functionality, accessibility, performance, responsive behaviour, SEO, security, content, assets, integrations, and deployment state.",
+      "source": "Tangison",
+      "license": "MIT",
+      "portability": [
+        "installed-agent-skill",
+        "repository-reading",
+        "copy-paste"
+      ]
+    },
+    {
+      "name": "tangison-web-build",
+      "path": "skills/tangison-web-build/SKILL.md",
+      "description": "Implement approved websites completely while preserving existing architecture. Use when building, repairing, or extending authorised website routes, components, states, integrations, accessibility, performance, and responsive behaviour.",
+      "source": "Tangison",
+      "license": "MIT",
+      "portability": [
+        "installed-agent-skill",
+        "repository-reading",
+        "copy-paste"
+      ]
+    },
+    {
+      "name": "tangison-web-content",
+      "path": "skills/tangison-web-content/SKILL.md",
+      "description": "Own source-backed website content strategy, information architecture, page hierarchy, and section-level content planning. Use before final copywriting or implementation when website facts and page structure must be established.",
+      "source": "Tangison",
+      "license": "MIT",
+      "portability": [
+        "installed-agent-skill",
+        "repository-reading",
+        "copy-paste"
+      ]
+    },
+    {
+      "name": "tangison-web-deploy",
+      "path": "skills/tangison-web-deploy/SKILL.md",
+      "description": "Deploy an exact audited website commit and verify production behaviour. Use only when deployment is requested or already authorised, including preview, production, domain, TLS, redirect, indexing, integration, rollback, and live-audit work.",
+      "source": "Tangison",
+      "license": "MIT",
+      "portability": [
+        "installed-agent-skill",
+        "repository-reading",
+        "copy-paste"
+      ]
+    },
+    {
+      "name": "tangison-web-loop",
+      "path": "skills/tangison-web-loop/SKILL.md",
+      "description": "Orchestrate complete website work through bounded, verified outcomes. Use for multi-phase website planning, content, design, implementation, audit, correction, and deployment where ownership and stopping conditions must remain explicit.",
+      "source": "Tangison",
+      "license": "MIT",
+      "portability": [
+        "installed-agent-skill",
+        "repository-reading",
+        "copy-paste"
+      ]
+    },
+    {
+      "name": "tangison-web-plan",
+      "path": "skills/tangison-web-plan/SKILL.md",
+      "description": "Own website scope, architecture, routes, integrations, risks, and acceptance criteria. Use when the user asks to plan, scope is undefined, architecture is unsafe to assume, or legal, production, data, migration, or deployment decisions require an approved build plan.",
+      "source": "Tangison",
+      "license": "MIT",
+      "portability": [
+        "installed-agent-skill",
+        "repository-reading",
+        "copy-paste"
+      ]
+    },
+    {
+      "name": "tangison-widget-master",
+      "path": "skills/tangison-widget-master/SKILL.md",
+      "description": "Choose accessible interaction patterns based on content purpose and visibility cost. Use when deciding between static content, tabs, accordions, carousels, modals, drawers, tooltips, menus, filters, or other interface widgets.",
+      "source": "Tangison",
+      "license": "MIT",
+      "portability": [
+        "installed-agent-skill",
+        "repository-reading",
+        "copy-paste"
+      ]
+    }
+  ]
+}
