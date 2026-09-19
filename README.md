@@ -46,3 +46,31 @@ Demo mode is never assumed. It activates only when the user explicitly requests 
 ## Start a complete project
 
 Copy the master invocation from [`SUPER_PROMPT.md`](SUPER_PROMPT.md). It connects Webman with Superpowers, Ponytail, Hallmark, Impeccable, Taste, full-output enforcement, Anime.js, GSAP ScrollTrigger, marketing, auditing, GitHub, and Vercel while keeping one proof ledger.
+
+## Verification
+
+Webman separates what it can prove from what it asks an agent to do. The
+executable layer lives in this repository and runs locally and in CI:
+
+| Gate | Command | What it proves |
+|---|---|---|
+| `validate.py` | `python3 validate.py` | Every shipped skill has a SKILL.md with valid frontmatter, every local reference resolves, no placeholder patterns, em dashes, or secret-shaped strings, the PDF preflight script parses, and SUPER_PROMPT.md only references repositories pinned in `skills-lock.json` |
+| `validate.py --check-remotes` | adds network checks | Every pinned commit still exists upstream |
+| `.github/workflows/validate.yml` | runs on every push and PR | The above cannot silently regress |
+| `skills/tangison-documents/scripts/preflight_pdf.py` | run per document | Rendered PDF quality checks before delivery |
+
+`skills-lock.json` pins every external skill repository referenced by the
+super prompt to an exact commit. Update a pin deliberately: review the
+upstream diff, then update the commit field.
+
+What Webman does **not** prove by itself: the operating rules inside each
+SKILL.md are instructions for a harness, not executable code. They are
+enforced only when an agent follows them and records evidence in PROOF.md.
+The `tangison-web-audit` and `tangison-web-deploy` skills define the release
+gates; this repository guarantees the stack is structurally sound, clean, and
+pinned, and that the rules cannot drift unnoticed.
+
+## License
+
+MIT. See [`LICENSE`](LICENSE).
+

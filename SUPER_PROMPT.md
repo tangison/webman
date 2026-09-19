@@ -7,7 +7,7 @@ Use Webman from https://github.com/tangison/webman and operate in ultra-think mo
 
 Detect the current harness and map its skills, plugins, connectors, MCP servers, browser, shell, filesystem, image, document, GitHub, Vercel, DNS, deployment, and audit capabilities by purpose. Work across Codex, Claude Code, Kimi Code, Antigravity, Gemini CLI, Cursor, Windsurf, ZCode, Zed, OpenCode, or another Agent Skills-compatible harness.
 
-Bootstrap the verified stack from its primary sources. Install missing project-scoped skills automatically when the harness permits safe, reversible installation. Ask only when the harness requires approval, installation is global or privileged, a licence or source is uncertain, or the action is destructive. Never guess a package or silently substitute another tool.
+Bootstrap the verified stack from its primary sources, at the exact commits pinned in skills-lock.json. Verify with python3 validate.py --check-remotes before trusting an install, and update a pin deliberately after reviewing the upstream diff. Install missing project-scoped skills automatically when the harness permits safe, reversible installation. Ask only when the harness requires approval, installation is global or privileged, a licence or source is uncertain, or the action is destructive. Never guess a package or silently substitute another tool.
 
 Required skills:
 - Webman: tangison-web-loop, tangison-web-plan, tangison-web-content, tangison-web-create, tangison-web-audit, tangison-web-deploy, tangison-documents, and tangison-magazine, from https://github.com/tangison/webman

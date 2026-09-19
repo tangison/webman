@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "description": "Pinned external skill stack for Webman. Every repository referenced by SUPER_PROMPT.md is recorded here with the exact commit it was last verified against. validate.py enforces that SUPER_PROMPT.md only references pinned repositories and (with --check-remotes) that each pinned commit still exists upstream. Update a pin deliberately: review the diff, then update the commit field.",
+  "pins": {
+    "obra/superpowers": {
+      "commit": "5bf4e78011075bcfc0dc295f0724994cd123ee71",
+      "purpose": "Brainstorming, TDD, systematic-debugging, code review, verification-before-completion",
+      "verified": "2026-09-19"
+    },
+    "dietrichgebert/ponytail": {
+      "commit": "e3ba2aa6f1e6f0bc4d69eb09c9f0d0a93af56156",
+      "purpose": "Complexity control: dependency and abstraction pruning",
+      "verified": "2026-09-19"
+    },
+    "pbakaus/impeccable": {
+      "commit": "f2c7051853848826aac2f4646581d62a732155ad",
+      "purpose": "Rendered design critique and anti-slop detector",
+      "verified": "2026-09-19"
+    },
+    "nutlope/hallmark": {
+      "commit": "13ac0ec7e148655948100b6396439e481361d690",
+      "purpose": "Structural anti-slop gate and final design audit",
+      "verified": "2026-09-19"
+    },
+    "leonxlnx/taste-skill": {
+      "commit": "e79ca9ec7e071eb3a3b623c4fb752e853fc3ed58",
+      "purpose": "Design taste (design-taste-frontend) and full-output-enforcement",
+      "verified": "2026-09-19"
+    },
+    "freshtechbro/claudedesignskills": {
+      "commit": "1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd",
+      "purpose": "Anime.js and GSAP ScrollTrigger motion skills",
+      "verified": "2026-09-19"
+    },
+    "coreyhaines31/marketingskills": {
+      "commit": "5b2c0007766c6a1cf1d53fd8fc73e979e0821022",
+      "purpose": "Marketing and SEO audit skill suites",
+      "verified": "2026-09-19"
+    },
+    "squirrelscan/skills": {
+      "commit": "8721d5eea3aa9ff9ca95d7674591578591c9bfa8",
+      "purpose": "Website audit skills",
+      "verified": "2026-09-19"
+    },
+    "calm-north/seojuice-skills": {
+      "commit": "c1f633bea512365ba04477076369e418ecc82ffd",
+      "purpose": "SEO audit skills",
+      "verified": "2026-09-19"
+    }
+  }
+}
